@@ -1,0 +1,37 @@
+.header
+  position: fixed
+  top: 20px
+  left: 0
+  width: 100%
+  z-index: 20
+  &_first
+    .header__logo
+      +fadeout($tr)
+  &__inner
+    display: flex
+    align-items: center
+    justify-content: space-between
+  &__contacts
+    margin-left: 30px
+  &__tel
+    display: inline-block
+    vertical-align: middle
+    margin-right: 47px
+  
+.nav
+  &__list
+    display: flex
+  &__item
+    padding: 0 20px
+  &__link
+    color: $textBlack
+
+.phone
+  font-size: 28px
+  font-weight: 700
+  letter-spacing: -0.1px
+  color: $textLight
+
+.logo
+  img
+    display: block

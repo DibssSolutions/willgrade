@@ -14,48 +14,63 @@
   <body>
     <!-- BEGIN content -->
     <div class="out">
-      <h1>Index page</h1>
-      <p>Hello from partials/_header.html</p>
-      <svg class="icon icon-facebook">
-        <use xlink:href="img/sprite.svg#icon-facebook"></use>
-      </svg>
-      <p>
-        <!-- begin input -->
-        <label class="checkbox">
-          <input type="checkbox" name="checkbox">
-          <span class="checkbox__text">checkbox</span>
-        </label>
-        <!-- end input -->
-      </p>
-      <p>
-        <!-- begin input -->
-        <label class="checkbox">
-          <input type="checkbox" name="exemple-name" checked>
-          <span class="checkbox__text">checkbox-checked</span>
-        </label>
-        <!-- end input -->
-      </p>
-      <!-- begin input -->
-      <label class="radio">
-        <input type="radio" name="exemple-name">
-        <span class="radio__text">text</span>
-      </label>
-      <!-- end input -->
-      <!-- begin breadcrumbs -->
-      <ul class="breadcrumbs">
-        <li class="breadcrumbs__item">
-          <a href="#">Главная</a>
-        </li>
-        <li class="breadcrumbs__item">
-          <a href="#">Внутренняя</a>
-        </li>
-        <li class="breadcrumbs__item">
-          <span>Корзина</span>
-        </li>
-      </ul>
-      <!-- end breadcrumbs -->
-      <li>Item1</li>
-      <li>Item2</li>
+      <header class="header header_first js-header">
+        <div class="header__outer outer">
+          <div class="header__inner inner">
+            <div class="header__logo">
+              <div class="logo">
+                <img src="img/logo-dark.png" alt="logo">
+              </div>
+            </div>
+            <div class="header__nav">
+              <nav class="nav">
+                <ul class="nav__list">
+                  <li class="nav__item"><a href="#selling" class="nav__link">Продажа квартир</a></li>
+                  <li class="nav__item"><a href="#investment" class="nav__link">Инвестиции</a></li>
+                  <li class="nav__item"><a href="#development" class="nav__link">Девелопмент</a></li>
+                  <li class="nav__item"><a href="#career" class="nav__link">Карьера</a></li>
+                  <li class="nav__item"><a href="#contacts" class="nav__link">Контакты</a></li>
+                </ul>
+              </nav>
+            </div>
+            <div class="header__contacts">
+              <div class="header__tel">
+                <a href="tel:+74953322211" class="phone">+7 (495) 33 222 11</a>
+              </div>
+              <a href="#" class="btn btn_solid">Оставить заявку</a>
+            </div>
+          </div>
+        </div>
+      </header>
+      <section class="hero section" style='background-image: url(img/hero_bg.jpg);'>
+        <div class="hero__outer outer">
+          <div class="hero__inner inner">
+            <div class="hero__content">
+              <div class="hero__logo">
+                <img src="img/logo-white.png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="selling section">
+        <div class="selling__outer outer">
+          <div class="selling__inner inner">
+          </div>
+        </div>
+      </section>
+      <section class="selling section">
+        <div class="selling__outer outer">
+          <div class="selling__inner inner">
+          </div>
+        </div>
+      </section>
+      <section class="section investment">
+        <div class="investment__outer outer">
+          <div class="investment__inner inner">
+          </div>
+        </div>
+      </section>
     </div>
     <!-- END content -->
     <!-- BEGIN scripts -->

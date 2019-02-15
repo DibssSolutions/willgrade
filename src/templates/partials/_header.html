@@ -1,1 +1,32 @@
-<p>Hello from partials/_header.html</p>
+<header class="header header_first js-header">
+  <div class="header__outer outer">
+    <div class="header__inner inner">
+      <div class="header__logo">
+        <div class="logo">
+          <img src="img/logo-dark.png" alt="logo">
+        </div>
+      </div>
+      <div class="header__nav">
+        <nav class="nav">
+          <ul class="nav__list">
+            {% for item in [
+              { title: 'Продажа квартир', link: 'selling' },
+              { title: 'Инвестиции', link: 'investment' },
+              { title: 'Девелопмент', link: 'development' },
+              { title: 'Карьера', link: 'career' },
+              { title: 'Контакты', link: 'contacts' }
+            ] %}
+              <li class="nav__item"><a href="#{{ item.link }}" class="nav__link">{{ item.title }}</a></li>
+            {% endfor %}
+          </ul>
+        </nav>
+      </div>
+      <div class="header__contacts">
+        <div class="header__tel">
+          <a href="tel:+74953322211" class="phone">+7 (495) 33 222 11</a>
+        </div>
+        <a href="#" class="btn btn_solid">Оставить заявку</a>
+      </div>
+    </div>
+  </div>
+</header>
