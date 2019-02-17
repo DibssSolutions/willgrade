@@ -31,3 +31,25 @@
 .inner
   padding-left: 77px
   width: 100%
+
+.section
+  &__outer
+    height: 100%
+  &__inner
+    height: 100%
+    display: flex
+    flex-wrap: wrap
+    margin: 0 -15px
+  &__left
+    +flex-size(27.5%)
+    padding: 0 88px 0 15px
+  &__right
+    +flex-size(72.5%)
+    padding: 0 15px
+    position: relative
+  &__bg
+    +coverdiv
+    +cover
+  .fp-tableCell
+    vertical-align: top
+    height: 100% !important

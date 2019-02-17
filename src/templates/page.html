@@ -7,13 +7,26 @@ title: Index page
 {% block content %}
   {# partial example #}
   {% include "partials/_header.html" %}
-
+  <div class="fullpage">
+    {% include "partials/_hero.html" %}
+    {{ selling.section({ 
+      id: 'selling',
+      title: 'Купить квартиру в Москве',
+      bg: 'selling_bg_Russia.png',
+      text: '<p>В нашем портфолио собраны несколько тысяч уникальных планировок квартир бизнес-класса в новостройках. Эксперты компании досконально владеют актуальной информацией о состоянии рынка жилой недвижимости в Москве.</p>
+      <p>Мы анализируем цены, спрос и предложение, помогаем одобрить ипотеку, получить рассрочку от застройщика, другие скидки, сопровождаем все этапы сделки без потерь.</p>
+      '
+    }) }}
+    {{ selling.section({ 
+      id: 'selling-2',
+      title: 'Купить квартиру в Европе',
+      bg: 'selling_bg_Europe.png'
+    }) }}
+    {% include "partials/_investment.html" %}
+    {% include "partials/_contacts.html" %}
+  </div>
   {# mixin example #}
-  {% include "partials/_hero.html" %}
-  {{ mixins.selling() }}
-  {{ mixins.selling() }}
-  {% include "partials/_investment.html" %}
-
+  
 
   
 

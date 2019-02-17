@@ -19,7 +19,11 @@ $(document).ready(function() {
     scrollOverflow: true,
     responsive: 768,
     resize: false,
-    fixedElements: '.js-header'
+    fixedElements: '.js-header',
+    menu: '#myMenu',
+    navigation: true,
+    fitToSection: false,
+    paddingTop: 140
   });
   // afterRender: () => {
   //   $.fn.fullpage.setAllowScrolling(false);

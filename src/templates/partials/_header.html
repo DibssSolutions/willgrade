@@ -1,10 +1,10 @@
-<header class="header header_first js-header">
+<header class="header header_first js-header" id="myMenu">
   <div class="header__outer outer">
     <div class="header__inner inner">
       <div class="header__logo">
-        <div class="logo">
+        <a href="#hero"  data-menuanchor="hero" class="logo">
           <img src="img/logo-dark.png" alt="logo">
-        </div>
+        </a>
       </div>
       <div class="header__nav">
         <nav class="nav">
@@ -16,7 +16,7 @@
               { title: 'Карьера', link: 'career' },
               { title: 'Контакты', link: 'contacts' }
             ] %}
-              <li class="nav__item"><a href="#{{ item.link }}" class="nav__link">{{ item.title }}</a></li>
+              <li class="nav__item" data-menuanchor="{{ item.link }}"><a href="#{{ item.link }}" class="nav__link">{{ item.title }}</a></li>
             {% endfor %}
           </ul>
         </nav>
@@ -25,7 +25,7 @@
         <div class="header__tel">
           <a href="tel:+74953322211" class="phone">+7 (495) 33 222 11</a>
         </div>
-        <a href="#" class="btn btn_solid">Оставить заявку</a>
+        <a href="#" class="btn btn_solid"><span class="btn__text">Оставить заявку</span></a>
       </div>
     </div>
   </div>
