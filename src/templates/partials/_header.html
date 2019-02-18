@@ -12,8 +12,8 @@
             {% for item in [
               { title: 'Продажа квартир', link: 'selling' },
               { title: 'Инвестиции', link: 'investment' },
-              { title: 'Девелопмент', link: 'development' },
-              { title: 'Карьера', link: 'career' },
+              { title: 'Девелопмент', link: 'investment' },
+              { title: 'Карьера', link: 'investment' },
               { title: 'Контакты', link: 'contacts' }
             ] %}
               <li class="nav__item" data-menuanchor="{{ item.link }}"><a href="#{{ item.link }}" class="nav__link">{{ item.title }}</a></li>

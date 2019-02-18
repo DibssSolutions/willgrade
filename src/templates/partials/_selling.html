@@ -1,15 +1,19 @@
+{% import "partials/_mixins.html" as mixins %}
+
 {% macro section(props) %}
-  <section class="section section_selling" data-anchor="{{ props.id }}">
+  <section class="section section_selling js-section" data-anchor="{{ props.id }}">
     <div class="section__outer outer">
       <div class="section__inner inner">
 				<div class="section__left">
 					<div class="section__title-lg">
-						<h2 class="title-lg">{{ props.title }}</h2> 
+						<h2 class="title-lg">{{ props.title }}</h2>
 					</div>
-					<div class="section__text">{{ props.text | safe }}</div>
+          <div class="section__splitter-horiz"></div>
+          <div class="section__text">{{ props.text | safe }}</div>
+          <div class="section__download-btn js-download-field">{{ mixins.downloadBtn() }}</div>
 				</div>
-				<div class="section__right">
-					<div class="section__bg" style='background-image: url(img/{{ props.bg }});'></div>
+				<div class="section__right" style='background-image: url(img/{{ props.bg }});'>
+					<!-- <div class="section__bg" style='background-image: url(img/{{ props.bg }});'></div> -->
 				</div>
       </div>
     </div>

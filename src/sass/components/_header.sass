@@ -3,11 +3,15 @@
   top: 0
   left: 0
   width: 100%
+  padding: 28px 0
   z-index: 20
   background-color: $white
-  // &_first
-  //   .header__logo
-  //     +fadeout($tr)
+  // background-color: red
+  transition: background-color 0.5s
+  &.is-transparent
+    background-color: transparent
+    .header__logo
+      +fadeout($tr)
   &__inner
     display: flex
     align-items: center

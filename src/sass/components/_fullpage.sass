@@ -36,3 +36,38 @@
 //         visibility: visible
 //         position: relative !important
 //         height: auto !important
+
+.sections-wrapper
+  position: relative
+  overflow-x: hidden
+  // margin-bottom: -135px
+  // .fp-scrollable, .fp-scroller
+  //   overflow: visible
+
+.iScrollIndicator
+  background-color: $blue !important
+
+.section_development
+  position: absolute
+  top: 50vh
+  left: 14.1%
+  z-index: 3
+  width: 100%
+  min-height: inherit
+  height: calc(100vh - 135px)
+  transition: transform 0.5s
+  &:hover
+    transform: translateY(-50vh)
+
+.section_investment
+  position: relative
+  z-index: 1
+  min-height: inherit
+  height: calc(100vh - 135px)
+
+.section_career
+  min-height: inherit
+  height: calc(100vh - 135px)
+  position: relative
+  z-index: 5
+  margin-top: 92px

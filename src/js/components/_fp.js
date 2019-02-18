@@ -7,23 +7,34 @@ var fullpage = require("../lib/jquery.fullpage.min.js");
 // var fp = document.getElementById('fullpage');
 
 $(document).ready(function() {
-  var slides = $("section");
+  var slides = $(".js-section");
 
   new IScroll("section");
 
   $(".out").fullpage({
     responsiveWidth: 10,
     responsiveHeight: 10,
-    scrollingSpeed: 1000,
-    sectionSelector: ".section",
+    scrollingSpeed: 700,
+    sectionSelector: ".js-section",
     scrollOverflow: true,
     responsive: 768,
     resize: false,
-    fixedElements: '.js-header',
-    menu: '#myMenu',
+    fixedElements: ".js-header",
+    menu: "#myMenu",
     navigation: true,
     fitToSection: false,
-    paddingTop: 140
+    paddingTop: 135,
+
+    // onLeave: function(origin, destination, direction) {
+    //   var leavingSection = this;
+    //   console.log(origin, destination, direction);
+    //   var header = $(".js-header");
+    //   if (origin == 1 && direction == "down") {
+    //     header.removeClass("is-transparent");
+    //   } else if (destination === 1 && direction == "up") {
+    //     header.addClass("is-transparent");
+    //   }
+    // }
   });
   // afterRender: () => {
   //   $.fn.fullpage.setAllowScrolling(false);

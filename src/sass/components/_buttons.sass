@@ -38,22 +38,86 @@
       stroke-dasharray: 1432
       stroke-dashoffset: 1432
 
-.play-btn
+.circle-btn
   background-color: transparent
-  svg
+  font-size: 0
+  cursor: default
+  // &:hover
+  //   .normal
+  //     +fadeout($tr)
+  //   .hovered
+  //     +fadein
+  //   .circle-btn__text_hidden
+  //     +fadein
+  //     pointer-events: inherit
+  &__icon
+    display: inline-block
+    vertical-align: middle
     width: 50px
     height: 50px
-    .normal
-      stroke: $white
-      stroke-width: 1px
-      fill: none
-    .normal-circle
-      stroke-dasharray: 158
-      stroke-dashoffset: 158
-      animation: drawBtn 0.5s 1s forwards ease-in
-    .normal-triangle
-      opacity: 0
-      animation: fadeIn 0.3s 1.4s forwards ease-out
+    cursor: pointer
+    // .circle-btn_download &
+    //   position: relative
+    //   &:after
+    //     content: ''
+    //     position: absolute
+    //     top: -50px
+    //     left: -50px
+    //     right: -50px
+    //     bottom: -50px
+    //     border-radius: 50%
+    //     background-color: rgba(red, 0.3)
+    &:hover
+      .normal
+        +fadeout($tr)
+      .hovered
+        +fadein
+      ~ .circle-btn__text_hidden
+        +fadein
+        pointer-events: inherit
+      .normal_blue
+        +fadein
+        fill: $blue
+      .normal-download-icon
+        fill: $white
+  .normal
+    stroke: $white
+    stroke-width: 1px
+    fill: none
+    &_blue
+      stroke: $blue
+  .normal-circle
+    stroke-dasharray: 158
+    stroke-dashoffset: 158
+    animation: drawBtn 0.5s 1s forwards ease-in
+  .normal-image
+    opacity: 0
+    animation: fadeIn 0.3s 1.4s forwards ease-out
+  .normal-download-icon
+    fill: $blue
+    stroke: none
+  .hovered
+    +fadeout(tr)
+    &_white
+      fill: $white
+    &_blue
+      fill: $blue
+  &__text
+    display: inline-block
+    vertical-align: middle
+    margin-left: 26px
+    font-family: $gilroy
+    font-size: 16px
+    font-weight: 600
+    line-height: normal
+    letter-spacing: -0.1px
+    color: $textLight
+    text-transform: uppercase
+    .circle-btn_download &
+      color: $blue
+    &_hidden
+      +fadeout(0.6s)
+      pointer-events: none
 
 @keyframes drawBtn
   to 

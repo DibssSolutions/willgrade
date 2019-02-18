@@ -1,4 +1,4 @@
-<section class="hero section" style='background-image: url(img/hero_bg.jpg);' data-anchor='hero'>
+<section class="section hero js-section" style='background-image: url(img/hero_bg.jpg);' data-anchor='hero'>
   <div class="hero__outer outer">
     <div class="hero__inner inner">
       <div class="hero__content">
@@ -10,12 +10,12 @@
             Инвестиции в жилую и коммерческую недвижимость по всему миру
           </h2>
         </div>
-        <div class="hero__descr">
+        <div class="hero__descr text-block">
           Мы осуществляем продажу квартир и коммерческой недвижимости в Москве, Великобритании, Австрии, Монако, Швейцарии, Франции, Германии и Чехии. 
         </div>
         <div class="hero__actions">
           <div class="hero__question-btn">
-            {{ mixins.animatedMainBtn() }}
+            {{ mixins.animatedMainBtn({ text: 'Задать вопрос' }) }}
           </div>
           <div class="hero__play">
             {{ mixins.playBtn() }}
