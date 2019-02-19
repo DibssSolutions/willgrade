@@ -14,7 +14,7 @@ $(document).ready(function() {
   $(".out").fullpage({
     responsiveWidth: 10,
     responsiveHeight: 10,
-    scrollingSpeed: 700,
+    scrollingSpeed: 2000,
     sectionSelector: ".js-section",
     scrollOverflow: true,
     responsive: 768,
@@ -23,7 +23,7 @@ $(document).ready(function() {
     menu: "#myMenu",
     navigation: true,
     fitToSection: false,
-    paddingTop: 135,
+    // paddingTop: 135,
 
     // onLeave: function(origin, destination, direction) {
     //   var leavingSection = this;

@@ -32,13 +32,13 @@
   padding-left: 77px
 
 .section
-  min-height: 100vh
-  height: 100%
+  // height: calc(100vh - 135px) !important
   // padding-top: 135px
   &__outer
 
   &__inner
     height: calc(100vh - 135px)
+    // min-height: 100vh
     display: flex
     flex-wrap: wrap
     // margin: 0 -15px
@@ -78,8 +78,8 @@
     margin-bottom: 60px
     p:not(:last-child)
       margin-bottom: 24px
-  // .fp-tableCell
-  //   vertical-align: top
+  .fp-tableCell
+    vertical-align: top
   //   height: calc(100vh - 135px) !important
   &_selling
     // background-image: linear-gradient( 135deg, #E2B0FF 10%, #9F44D3 100%)
