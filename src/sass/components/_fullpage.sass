@@ -53,10 +53,13 @@
   .fp-tableCell
     vertical-align: top
   &_selling
+    .section__title-lg
+      margin-top: 26px
     .section__left
       +cover
     .section__text
       margin-top: 40px
+      margin-bottom: 27px
   &__download-btn-wrapper
     margin-left: -25px
   &__download-btn-area
@@ -65,6 +68,7 @@
     height: 100px
     width: 100px
     .circle-btn
+      backface-visibility: hidden
       position: absolute
       top: 25px
       left: 25px
@@ -77,9 +81,6 @@
       background-color: $darkBg
       background-position: 0 100%
       background-repeat: no-repeat
-  &_development
-    .section__inner
-      background-color: $textLight
   &_contacts
     color: $white
     .section__inner
@@ -104,16 +105,18 @@
     max-width: 100%
     display: inline-block
     vertical-align: middle
-    
+
 .section_development
   position: absolute
   top: 50vh
-  left: 14.1%
+  left: 12.1%
   z-index: 3
   width: 100%
   min-height: inherit
   height: calc(100vh - 135px)
   transition: transform 0.5s
+  .section__inner
+    background-color: $textLight
   .section__left
     +flex-size(44.5%)
   .section__right
@@ -129,6 +132,8 @@
   z-index: 1
   min-height: inherit
   height: calc(100vh - 135px)
+  .section__title-md
+    max-width: 700px
   // transition: z-index 0.5s
   // +hover
   //   z-index: 10
