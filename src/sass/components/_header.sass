@@ -34,6 +34,12 @@
     padding: 0 19px
   &__link
     color: $textBlack
+    transition: color .3s
+    .is-transparent &
+      +hover
+        color: $white 
+    +hover
+      color: $blue
 
 .phone
   font-size: 28px
