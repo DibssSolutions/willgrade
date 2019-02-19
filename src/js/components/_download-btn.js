@@ -15,13 +15,13 @@ var magneticAreaElements = document.querySelectorAll('.js-download-field');
   var magneticBounds = magneticAreaEl.getBoundingClientRect();
   var magneticWidth = magneticBounds.width;
   var magneticHeight = magneticBounds.height;
-  var magneticRadius = magneticWidth / 2;
+  var magneticRadius = magneticWidth / 3;
   
   // ReboundJS stuff for the springy goodness
   var springSystem = new rebound.SpringSystem();
   var spring = springSystem.createSpring(100, 7);
   
-  console.log(magneticBounds, magneticRadius);
+  // console.log(magneticBounds, magneticRadius);
   
   var cursorPosition = {
     x: 0,
@@ -41,12 +41,12 @@ var magneticAreaElements = document.querySelectorAll('.js-download-field');
     // cursorPosition.y = ev.pageY - ev.currentTarget.offsetTop - magneticHeight / 2;
     cursorPosition.x = ev.pageX - ev.currentTarget.offsetLeft - magneticWidth / 2;
     cursorPosition.y = ev.pageY - ev.currentTarget.offsetTop - magneticHeight / 2;
-    console.log(cursorPosition, ev.currentTarget.offsetLeft);
+    // console.log(cursorPosition, ev.currentTarget.offsetLeft);
   
     var distance = Math.sqrt(
       Math.pow(cursorPosition.x, 2) + Math.pow(cursorPosition.y, 2)
     ); // Cursor distance from original centre
-    console.log(distance);
+    // console.log(distance);
     if (distance > magneticRadius) {
       spring.setEndValue(0);
       return;
