@@ -25,6 +25,7 @@
 .connection
   display: flex
   align-items: center
+  justify-content: flex-start
   &__text
     min-width: 208px
     font-family: $gilroy
@@ -35,6 +36,8 @@
     line-height: 1.2
     letter-spacing: -0.005em
     color: $white
+    .connection_modal &
+      color: $blue
   &__link
     &:not(:last-child)
       margin-right: 21px

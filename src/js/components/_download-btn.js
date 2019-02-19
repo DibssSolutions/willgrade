@@ -3,7 +3,9 @@ var rebound = require('rebound');
 
 // Elements
 var magneticAreaElements = document.querySelectorAll('.js-download-field');
-[... magneticAreaElements].forEach(el => {
+console.log(magneticAreaElements.length);
+
+[...magneticAreaElements].forEach(el => {
   var magneticAreaEl = el;
   var buttonEl = el.querySelector('.js-download-btn');
 
@@ -37,11 +39,12 @@ var magneticAreaElements = document.querySelectorAll('.js-download-field');
   });
   
   magneticAreaEl.addEventListener('mousemove', function(ev) {
+
     // cursorPosition.x = ev.pageX - ev.currentTarget.offsetLeft - magneticWidth / 2;
     // cursorPosition.y = ev.pageY - ev.currentTarget.offsetTop - magneticHeight / 2;
-    cursorPosition.x = ev.pageX - ev.currentTarget.offsetLeft - magneticWidth / 2;
-    cursorPosition.y = ev.pageY - ev.currentTarget.offsetTop - magneticHeight / 2;
-    // console.log(cursorPosition, ev.currentTarget.offsetLeft);
+    cursorPosition.x = ev.pageX - $(ev.currentTarget).position().left - magneticWidth / 2;
+    cursorPosition.y = ev.pageY - $(ev.currentTarget).position().top - magneticHeight / 2;
+    console.log(cursorPosition);
   
     var distance = Math.sqrt(
       Math.pow(cursorPosition.x, 2) + Math.pow(cursorPosition.y, 2)
@@ -67,7 +70,7 @@ var magneticAreaElements = document.querySelectorAll('.js-download-field');
   function move(el, val) {
     var x = val * cursorPosition.x;
     var y = val * cursorPosition.y;
-    console.log(x, y);
+    // console.log(x, y);
     el.style.transform = 'translate(' + x + 'px, ' + y + 'px)';
     // buttonIconEl.style.transform =
     //   'translate(' + -x / 4 + 'px, ' + -y / 4 + 'px)';

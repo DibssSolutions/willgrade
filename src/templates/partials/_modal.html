@@ -1,0 +1,46 @@
+<div class="modal" data-modal="contacts-modal">
+  <div class="modal__container" data-modal-container>
+    <div class="modal__inner">
+      <button class="modal__close" data-modal-close>
+        {{ mixins.icon("close") }}
+      </button>
+      <div class="modal__bg">
+        <img src="img/modal_bg.png" alt="modal">
+        {# <img src="img/office-woman.png" alt="modal">  #}
+      </div>
+      <div class="modal__content">
+        <div class="modal__title">
+          <h2 class="title">Мы на связи</h2>
+          <div class="modal__name">Александров Александр</div>
+          <div class="modal__position">Консультант</div>
+          <div class="modal__splitter"></div>
+          <div class="modal__connections">
+            <div class="connection connection_modal">
+              <a href="tel:+799191119919" class="connection__text">
+                  +79 (919) 111 99 19
+              </a>
+              <div class="connection__links">
+                <span class="connection__link">
+                    {{ mixins.connectionBtn('telegram', 'grey') }}
+                </span>
+                <span class="connection__link">
+                    {{ mixins.connectionBtn('whatsapp', 'grey') }}
+                </span>
+              </div>
+            </div>
+            <div class="connection connection_modal">
+              <a href="skype:smth" class="connection__text">
+                willgrade
+              </a>
+              <div class="connection__links">
+                <span class="connection__link">
+                  {{ mixins.connectionBtn('skype', 'grey') }}
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
