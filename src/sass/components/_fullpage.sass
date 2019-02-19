@@ -7,9 +7,8 @@
 
 .section
   // height: calc(100vh - 135px) !important
-  // padding-top: 135px
   &__outer
-
+    padding-top: 135px
   &__inner
     height: calc(100vh - 135px)
     // min-height: 100vh
@@ -58,10 +57,10 @@
       +cover
     .section__text
       margin-top: 40px
-  &__download-btn
-    // display: inline-block
+  &__download-btn-wrapper
+    margin-left: -25px
+  &__download-btn-area
     position: relative
-    // height: 50px
     display: block
     height: 100px
     width: 100px
@@ -106,7 +105,6 @@
     display: inline-block
     vertical-align: middle
     
-
 .section_development
   position: absolute
   top: 50vh
@@ -128,6 +126,9 @@
   z-index: 1
   min-height: inherit
   height: calc(100vh - 135px)
+  // transition: z-index 0.5s
+  // +hover
+  //   z-index: 10
 
 .section_career
   min-height: inherit

@@ -7,7 +7,7 @@ title: Index page
 {% block content %}
   {# partial example #}
   {% include "partials/_header.html" %}
-  <div class="fullpage">
+  <div class="fullpage js-fullpage fp-auto-height-responsive">
     {% include "partials/_hero.html" %}
     {{ selling.section({ 
       id: 'selling',
@@ -17,20 +17,20 @@ title: Index page
       <p>Мы анализируем цены, спрос и предложение, помогаем одобрить ипотеку, получить рассрочку от застройщика, другие скидки, сопровождаем все этапы сделки без потерь.</p>
       '
     }) }} 
-    {# {{ selling.section({ 
+    {{ selling.section({ 
       id: 'selling-2',
       title: 'Купить квартиру <br>в Европе',
       bg: 'selling_bg_Europe.png',
       text: '<p>Наши эксперты экономят десятки тысяч евро на этапе поиска подходящего объекта жилищного фонда за рубежом.</p>
       <p>Мы максимально быстро отвечаем на запросы клиента (в течение 30 минут) и используем уникальные технологии презентации объектов (виртуальное посещение отдела продаж).</p>'
-    }) }} #}
+    }) }}
     <section class="js-section sections-wrapper" data-anchor="investment">
-      {# {% include "partials/_investment.html" %}  #}
-      {# {% include "partials/_development.html" %} #}
-      {# {% include "partials/_career.html" %} #}
+      {% include "partials/_investment.html" %} 
+      {% include "partials/_development.html" %}
+      {% include "partials/_career.html" %}
     </section>
     
-    {# {% include "partials/_contacts.html" %} #}
+    {% include "partials/_contacts.html" %}
   </div>
   {# mixin example #}
   

@@ -10,7 +10,9 @@
 					</div>
           <div class="section__splitter-horiz"></div>
           <div class="section__text">{{ props.text | safe }}</div>
-          <div class="section__download-btn js-download-field">{{ mixins.downloadBtn() }}</div>
+          <div class="section__download-btn-wrapper">
+            <div class="section__download-btn-area js-download-field">{{ mixins.downloadBtn() }}</div>
+          </div>
 				</div>
 				<div class="section__right" style='background-image: url(img/{{ props.bg }});'>
 					<!-- <div class="section__bg" style='background-image: url(img/{{ props.bg }});'></div> -->
