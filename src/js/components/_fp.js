@@ -12,16 +12,17 @@ $(document).ready(function() {
 
   new IScroll("section");
 
-  $(".fullpage").fullpage({
+  $(".js-fullpage").fullpage({
     responsiveWidth: 10,
     responsiveHeight: 10,
-    scrollingSpeed: 2000,
+    scrollingSpeed: 800,
     sectionSelector: ".js-section",
     scrollOverflow: true,
     responsive: 768,
     resize: false,
     fixedElements: ".js-header",
     menu: "#myMenu",
+    css3: true,
     // navigation: true,
     // fitToSection: false,
     // paddingTop: 135,
