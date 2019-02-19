@@ -108,7 +108,10 @@
     max-width: 100%
     display: inline-block
     vertical-align: middle
-
+.fp-scroller
+  -webkit-perspective: 300px
+  -moz-perspective: 300px
+  perspective: 300px
 .section_development
   position: absolute
   top: 50vh
@@ -117,7 +120,7 @@
   width: 100%
   min-height: inherit
   height: calc(100vh - 135px)
-  transition: transform 0.5s
+  transition: z-index 0.3s, transform .3s
   .section__inner
     background-color: $textLight
   .section__left
@@ -125,10 +128,8 @@
   .section__right
     +flex-size(55.5%)
   
-  .is-active-investment &
-    transform: translateY(50vh)
   .is-active-development &
-    transform: translateY(-50vh)
+    z-index: 10
 
 .section_investment
   position: relative
@@ -137,6 +138,8 @@
   height: calc(100vh - 135px)
   .section__title-md
     max-width: 700px
+  .is-active-investment &
+    z-index: 10
   // transition: z-index 0.5s
   // +hover
   //   z-index: 10

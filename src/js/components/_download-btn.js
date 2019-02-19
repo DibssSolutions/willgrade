@@ -1,76 +1,45 @@
-// import { rebound } from 'rebound';
-var rebound = require('rebound');
+import { TweenLite } from 'gsap';
 
-// Elements
-var magneticAreaElements = document.querySelectorAll('.js-download-field');
-[... magneticAreaElements].forEach(el => {
-  var magneticAreaEl = el;
-  var buttonEl = el.querySelector('.js-download-btn');
+{
+  let mouse = { x: 0, y: 0 };
+  let pos = { x: 0, y: 0 };
+  let ratio = 0.05;
+  let active = false;
 
-  // Cached sizes of things, so we don't force reflow
-  var buttonBounds = buttonEl.getBoundingClientRect();
-  var buttonWidth = buttonBounds.width;
-  var buttonHeight = buttonBounds.height;
-  
-  var magneticBounds = magneticAreaEl.getBoundingClientRect();
-  var magneticWidth = magneticBounds.width;
-  var magneticHeight = magneticBounds.height;
-  var magneticRadius = magneticWidth / 3;
-  
-  // ReboundJS stuff for the springy goodness
-  var springSystem = new rebound.SpringSystem();
-  var spring = springSystem.createSpring(100, 7);
-  
-  // console.log(magneticBounds, magneticRadius);
-  
-  var cursorPosition = {
-    x: 0,
-    y: 0
-  };
-  
-  spring.addListener({
-    onSpringUpdate: function onSpringUpdate(spring) {
-      var val = spring.getCurrentValue();
-      val = rebound.MathUtil.mapValueInRange(val, 0, 1, 0, 1);
-      move(buttonEl, val);
-    }
-  });
-  
-  magneticAreaEl.addEventListener('mousemove', function(ev) {
-    // cursorPosition.x = ev.pageX - ev.currentTarget.offsetLeft - magneticWidth / 2;
-    // cursorPosition.y = ev.pageY - ev.currentTarget.offsetTop - magneticHeight / 2;
-    cursorPosition.x = ev.pageX - ev.currentTarget.offsetLeft - magneticWidth / 2;
-    cursorPosition.y = ev.pageY - ev.currentTarget.offsetTop - magneticHeight / 2;
-    // console.log(cursorPosition, ev.currentTarget.offsetLeft);
-  
-    var distance = Math.sqrt(
-      Math.pow(cursorPosition.x, 2) + Math.pow(cursorPosition.y, 2)
-    ); // Cursor distance from original centre
-    // console.log(distance);
-    if (distance > magneticRadius) {
-      spring.setEndValue(0);
-      return;
-    }
-  
-    var distanceRatio = 1 - distance / magneticRadius;
-    var attraction = Math.abs(1 / (1 - Math.pow(distanceRatio * 10, 2)) - 1); // inverse-square style falloff - rapid increase in attraction as the distance decreases
-    attraction = Math.max(0, Math.min(1, attraction)); // Bound to reasonable values
-    spring.setEndValue(attraction);
-  
-    if (spring.isAtRest()) {
-      // wake up the spring
-      // TODO: this may not be be the best way to do this
-      spring.setVelocity(1);
-    }
-  });
-  
-  function move(el, val) {
-    var x = val * cursorPosition.x;
-    var y = val * cursorPosition.y;
-    console.log(x, y);
-    el.style.transform = 'translate(' + x + 'px, ' + y + 'px)';
-    // buttonIconEl.style.transform =
-    //   'translate(' + -x / 4 + 'px, ' + -y / 4 + 'px)';
+  document.addEventListener('mousemove', mouseMove);
+  const btnWrap = $('.js-download-field');
+  const btn = '.js-download-btn';
+
+  function mouseMove(e) {
+    mouse.x = e.clientX;
+    mouse.y = e.clientY;
   }
-});
+
+  btnWrap.mouseleave(function(e) {
+    TweenLite.to(this.querySelector(btn), 0.3, { x: 0, y: 0 });
+    active = false;
+  });
+
+  btnWrap.mousemove(function(e) {
+    run(e, this);
+  });
+
+  function run(e, parent) {
+    runIt(e, parent, parent.querySelector(btn), 65);
+  }
+
+  function runIt(e, parent, target, movement) {
+    let boundingRect = parent.getBoundingClientRect();
+    let relX = e.clientX - boundingRect.left;
+    let relY = e.clientY - boundingRect.top;
+
+    TweenLite.to(target, 0.3, {
+      x: (relX - boundingRect.width / 2) / boundingRect.width * movement,
+      y: (relY - boundingRect.height / 2) / boundingRect.height * movement,
+      ease: Power2.easeOut
+    });
+  }
+
+
+}
 
