@@ -14,6 +14,71 @@
   background-color: $blue !important
 
 .section
+  &_investment,
+  &_career
+    .section__inner
+      background-color: $darkBg
+      background-repeat: no-repeat
+  &_investment
+    .section__inner
+      background-position: -4px 100%
+  &_career
+    .section__inner
+      background-position: 47px 180px
+      background-size: 422px 780px
+  &_contacts
+    color: $white
+    .section__title
+      letter-spacing: 0.04em
+      line-height: 1.28
+    .section__inner
+      background-color: $blue
+    .section__right
+      background-color: $darkBlue
+      padding-left: 0
+      +vertical
+  &_development
+    height: auto
+    position: absolute
+    margin-top: 140px
+    top: 50vh
+    left: 12.1%
+    z-index: 1
+    width: 100%
+    min-height: inherit
+    height: calc(100vh - 135px)
+    +hover
+      z-index: 3
+    .section__outer
+      padding-top: 0
+    .section__inner
+      background-color: $textLight
+    .section__left
+      +flex-size(44.5%)
+    .section__right
+      +flex-size(55.5%)
+  &_investment
+    position: relative
+    min-height: inherit
+    height: calc(100vh - 135px)
+    z-index: 0
+    +hover
+      z-index: 3
+    .section__title-md
+      max-width: 700px
+  &_career
+    pointer-events: auto
+    min-height: inherit
+    height: calc(100vh - 135px)
+    position: relative
+    z-index: 2
+    margin-top: 227px
+    +hover
+      z-index: 3
+    .section__outer
+      padding-top: 0
+      
+
   &__outer
     padding-top: 135px
   &__inner
@@ -82,29 +147,6 @@
       z-index: 3
   &__hr-btn
     margin-top: 77px
-  &_investment,
-  &_career
-    .section__inner
-      background-color: $darkBg
-      background-position: 0 100%
-      background-repeat: no-repeat
-  &_investment
-    .section__inner
-      background-position: -4px 100%
-  &_career
-    .section__inner
-      background-position: 0 -8%
-  &_contacts
-    color: $white
-    .section__title
-      letter-spacing: 0.04em
-      line-height: 1.28
-    .section__inner
-      background-color: $blue
-    .section__right
-      background-color: $darkBlue
-      padding-left: 0
-      +vertical
   &__adress
     margin-bottom: 60px
     .adress:not(:last-child)
@@ -128,52 +170,7 @@
     max-width: 100%
     display: inline-block
     vertical-align: middle
-.fp-scroller
-  -webkit-perspective: 300px
-  -moz-perspective: 300px
-  perspective: 300px
-  
-.section_investment
-  position: relative
-  min-height: inherit
-  height: calc(100vh - 135px)
-  z-index: 0
-  +hover
-    z-index: 3
-  .section__title-md
-    max-width: 700px
 
-.section_development
-  position: absolute
-  margin-top: 140px
-  top: 50vh
-  left: 12.1%
-  z-index: 1
-  width: 100%
-  min-height: inherit
-  height: calc(100vh - 135px)
-  +hover
-    z-index: 3
-  .section__outer
-    padding-top: 0
-  .section__inner
-    background-color: $textLight
-  .section__left
-    +flex-size(44.5%)
-  .section__right
-    +flex-size(55.5%)
-
-.section_career
-  pointer-events: auto
-  min-height: inherit
-  height: calc(100vh - 135px)
-  position: relative
-  z-index: 2
-  margin-top: 227px
-  +hover
-    z-index: 3
-  .section__outer
-    padding-top: 0
 
 .outer
   &__trigger
