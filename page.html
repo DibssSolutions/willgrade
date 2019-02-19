@@ -14,7 +14,7 @@
   <body>
     <!-- BEGIN content -->
     <div class="out">
-      <header class="header header_first js-header" id="myMenu">
+      <header class="header is-transparent js-header" id="myMenu">
         <div class="header__outer outer">
           <div class="header__inner inner">
             <div class="header__logo">
@@ -37,7 +37,7 @@
               <div class="header__tel">
                 <a href="tel:+74953322211" class="phone">+7 (495) 33 222 11</a>
               </div>
-              <a href="#" class="btn btn_solid js-header-btn"><span class="btn__text">Оставить заявку</span></a>
+              <a href="#" class="btn btn_solid js-header-btn" data-modal-control="contacts-modal"><span class="btn__text">Оставить заявку</span></a>
             </div>
           </div>
         </div>
@@ -47,9 +47,9 @@
           <div class="hero__outer outer">
             <div class="hero__inner inner">
               <div class="hero__content">
-                <div class="hero__logo">
+                <a href="#" class="hero__logo">
                   <img src="img/logo-white.png" alt="">
-                </div>
+                </a>
                 <div class="hero__title">
                   <h2 class="title text-black"> Инвестиции в жилую и коммерческую недвижимость по всему миру </h2>
                 </div>
@@ -255,8 +255,8 @@
           </section>
           <section class="section section_career">
             <div class="section__outer outer">
-              <div class="section__inner inner">
-                <div class="section__left section__left_border" style='background-image: url(img/office-woman.png);'>
+              <div class="section__inner inner" style='background-image: url(img/office-woman.png);'>
+                <div class="section__left section__left_border">
                 </div>
                 <div class="section__right text-light">
                   <div class="section__title-md">
@@ -435,6 +435,82 @@
             </div>
           </div>
         </section>
+      </div>
+      <div class="modal" data-modal="contacts-modal">
+        <div class="modal__container" data-modal-container>
+          <div class="modal__inner">
+            <button class="modal__close" data-modal-close>
+              <svg class="icon icon-close">
+                <use xlink:href="img/sprite.svg#icon-close"></use>
+              </svg>
+            </button>
+            <div class="modal__bg">
+              <img src="img/modal_bg.png" alt="modal">
+            </div>
+            <div class="modal__content">
+              <div class="modal__title">
+                <h2 class="title">Мы на связи</h2>
+                <div class="modal__name">Александров Александр</div>
+                <div class="modal__position">Консультант</div>
+                <div class="modal__splitter"></div>
+                <div class="modal__connections">
+                  <div class="connection connection_modal">
+                    <a href="tel:+799191119919" class="connection__text"> +79 (919) 111 99 19 </a>
+                    <div class="connection__links">
+                      <span class="connection__link">
+                        <a href="#" class="circle-btn  circle-btn_grey js-animated-btn">
+                          <span class="circle-btn__icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 51 51">
+                              <path class="circle-btn__circle" d="M25.5,0.5c-13.8,0-25,11.2-25,25s11.2,25,25,25s25-11.2,25-25S39.3,0.5,25.5,0.5z" />
+                            </svg>
+                            <span class="circle-btn__sprite-icon">
+                              <svg class="icon icon-telegram">
+                                <use xlink:href="img/sprite.svg#icon-telegram"></use>
+                              </svg>
+                            </span>
+                          </span>
+                        </a>
+                      </span>
+                      <span class="connection__link">
+                        <a href="#" class="circle-btn  circle-btn_grey js-animated-btn">
+                          <span class="circle-btn__icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 51 51">
+                              <path class="circle-btn__circle" d="M25.5,0.5c-13.8,0-25,11.2-25,25s11.2,25,25,25s25-11.2,25-25S39.3,0.5,25.5,0.5z" />
+                            </svg>
+                            <span class="circle-btn__sprite-icon">
+                              <svg class="icon icon-whatsapp">
+                                <use xlink:href="img/sprite.svg#icon-whatsapp"></use>
+                              </svg>
+                            </span>
+                          </span>
+                        </a>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="connection connection_modal">
+                    <a href="skype:smth" class="connection__text"> willgrade </a>
+                    <div class="connection__links">
+                      <span class="connection__link">
+                        <a href="#" class="circle-btn  circle-btn_grey js-animated-btn">
+                          <span class="circle-btn__icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 51 51">
+                              <path class="circle-btn__circle" d="M25.5,0.5c-13.8,0-25,11.2-25,25s11.2,25,25,25s25-11.2,25-25S39.3,0.5,25.5,0.5z" />
+                            </svg>
+                            <span class="circle-btn__sprite-icon">
+                              <svg class="icon icon-skype">
+                                <use xlink:href="img/sprite.svg#icon-skype"></use>
+                              </svg>
+                            </span>
+                          </span>
+                        </a>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <!-- END content -->
