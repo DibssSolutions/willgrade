@@ -9,21 +9,24 @@
             {% for adress in [
               {
                 city: 'Москва',
+                id: 'moscow',
                 street: 'ул. Третьяковская, 46, оф 17',
                 phone: '+7 (495) 456-44-55'
               },
               {
                 city: 'Цюрих',
+                id: 'zurich',
                 street: 'ул. Третьяковская, 46, оф 17',
                 phone: '+7 (495) 456-44-55'
               },
               {
                 city: 'Лондон',
+                id: 'london',
                 street: 'ул. Третьяковская, 46, оф 17',
                 phone: '+7 (495) 456-44-55'
               }
             ] %}
-              <div class="adress">
+              <div class="adress" data-adress-trigger="{{ adress.id }}">
                 <div class="adress__city-wrapper">
                   {{ mixins.icon('map-marker') }}
                   <span class="adress__city">{{ adress.city }}</span>
@@ -64,30 +67,41 @@
         </div>
       </div>
       <div class="section__right">
-        <img class="section__map" src="img/map.png" alt="map">
-          {# style='background-image: url(img/map.png);' #}
-        {% for marker in [
-          {
-            text: 'Лондон',
-            top: '44%',
-            left: '36%'
-          },
-          {
-            text: 'Цюрих',
-            top: '45.3%',
-            left: '40.9%'
-          },
-          {
-            text: 'Москва',
-            top: '41%',
-            left: '49.4%'
-          }
-        ] %}
-          <div class="map-marker" style="top: {{ marker.top }}; left: {{ marker.left }}">
-            <div class="map-marker__icon">{{ mixins.icon('map-marker') }}</div>
-            <div class="map-marker__title">{{ marker.text }}</div>
+        <div class="section__map-wrap js-animated-block">
+          <img class="section__map" src="img/map.svg" alt="map">
+          <div class="map-markers">
+            {% for marker in [
+              {
+                id: 'moscow',
+                text: 'Лондон',
+                top: '328px',
+                left: '523px'
+              },
+              {
+                id: 'zurich',
+                text: 'Цюрих',
+                top: '335px',
+                left: '584px'
+              },
+              {
+                id: 'london',
+                text: 'Москва',
+                top: '298px',
+                left: '688px'
+              }
+            ] %}
+              <div class="map-marker" data-adress-marker="{{ marker.id }}" style="top: {{ marker.top }}; left: {{ marker.left }}">
+                <div class="map-marker__icon">{{ mixins.icon('marker') }}</div>
+                <div class="map-marker__title">{{ marker.text }}</div>
+              </div>
+            {% endfor %}
           </div>
-        {% endfor %}
+          <div class="map-pointers">
+            {% for i in range(0,16) %}
+              <div class="map-point"></div>
+            {% endfor %}
+          </div>
+        </div>
       </div>
     </div>
   </div>

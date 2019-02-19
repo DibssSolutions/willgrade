@@ -42,7 +42,7 @@ $(document).ready(function() {
     },
     afterLoad: function(origin, destination, direction) {
       var loadedSection = this;
-      var buttons = $(loadedSection).find(".js-animated-btn");
+      var buttons = $(loadedSection).find(".js-animated-btn, .js-animated-block");
       buttons.each((index, el) => $(el).addClass(ANIMATE));
     }
   });

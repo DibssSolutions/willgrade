@@ -318,7 +318,7 @@
                   <h2 class="title">Адреса компании</h2>
                 </div>
                 <div class="section__adress">
-                  <div class="adress">
+                  <div class="adress" data-adress-trigger="moscow">
                     <div class="adress__city-wrapper">
                       <svg class="icon icon-map-marker">
                         <use xlink:href="img/sprite.svg#icon-map-marker"></use>
@@ -328,7 +328,7 @@
                     <div class="adress__street">ул. Третьяковская, 46, оф 17</div>
                     <a href="tel:+74954564455" class="adress__phone">+7 (495) 33 222 11</a>
                   </div>
-                  <div class="adress">
+                  <div class="adress" data-adress-trigger="zurich">
                     <div class="adress__city-wrapper">
                       <svg class="icon icon-map-marker">
                         <use xlink:href="img/sprite.svg#icon-map-marker"></use>
@@ -338,7 +338,7 @@
                     <div class="adress__street">ул. Третьяковская, 46, оф 17</div>
                     <a href="tel:+74954564455" class="adress__phone">+7 (495) 33 222 11</a>
                   </div>
-                  <div class="adress">
+                  <div class="adress" data-adress-trigger="london">
                     <div class="adress__city-wrapper">
                       <svg class="icon icon-map-marker">
                         <use xlink:href="img/sprite.svg#icon-map-marker"></use>
@@ -409,30 +409,52 @@
                 </div>
               </div>
               <div class="section__right">
-                <img class="section__map" src="img/map.png" alt="map">
-                <div class="map-marker" style="top: 44%; left: 36%">
-                  <div class="map-marker__icon">
-                    <svg class="icon icon-map-marker">
-                      <use xlink:href="img/sprite.svg#icon-map-marker"></use>
-                    </svg>
+                <div class="section__map-wrap js-animated-block">
+                  <img class="section__map" src="img/map.svg" alt="map">
+                  <div class="map-markers">
+                    <div class="map-marker" data-adress-marker="moscow" style="top: 328px; left: 523px">
+                      <div class="map-marker__icon">
+                        <svg class="icon icon-marker">
+                          <use xlink:href="img/sprite.svg#icon-marker"></use>
+                        </svg>
+                      </div>
+                      <div class="map-marker__title">Лондон</div>
+                    </div>
+                    <div class="map-marker" data-adress-marker="zurich" style="top: 335px; left: 584px">
+                      <div class="map-marker__icon">
+                        <svg class="icon icon-marker">
+                          <use xlink:href="img/sprite.svg#icon-marker"></use>
+                        </svg>
+                      </div>
+                      <div class="map-marker__title">Цюрих</div>
+                    </div>
+                    <div class="map-marker" data-adress-marker="london" style="top: 298px; left: 688px">
+                      <div class="map-marker__icon">
+                        <svg class="icon icon-marker">
+                          <use xlink:href="img/sprite.svg#icon-marker"></use>
+                        </svg>
+                      </div>
+                      <div class="map-marker__title">Москва</div>
+                    </div>
                   </div>
-                  <div class="map-marker__title">Лондон</div>
-                </div>
-                <div class="map-marker" style="top: 45.3%; left: 40.9%">
-                  <div class="map-marker__icon">
-                    <svg class="icon icon-map-marker">
-                      <use xlink:href="img/sprite.svg#icon-map-marker"></use>
-                    </svg>
+                  <div class="map-pointers">
+                    <div class="map-point"></div>
+                    <div class="map-point"></div>
+                    <div class="map-point"></div>
+                    <div class="map-point"></div>
+                    <div class="map-point"></div>
+                    <div class="map-point"></div>
+                    <div class="map-point"></div>
+                    <div class="map-point"></div>
+                    <div class="map-point"></div>
+                    <div class="map-point"></div>
+                    <div class="map-point"></div>
+                    <div class="map-point"></div>
+                    <div class="map-point"></div>
+                    <div class="map-point"></div>
+                    <div class="map-point"></div>
+                    <div class="map-point"></div>
                   </div>
-                  <div class="map-marker__title">Цюрих</div>
-                </div>
-                <div class="map-marker" style="top: 41%; left: 49.4%">
-                  <div class="map-marker__icon">
-                    <svg class="icon icon-map-marker">
-                      <use xlink:href="img/sprite.svg#icon-map-marker"></use>
-                    </svg>
-                  </div>
-                  <div class="map-marker__title">Москва</div>
                 </div>
               </div>
             </div>

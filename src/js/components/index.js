@@ -4,5 +4,4 @@ import './_initFancy';
 import './_download-btn';
 import './_modal';
 import { pathLength } from '../utils';
-
-// const circleLength = pathLength('.rect');
+import './_marker-hover';
