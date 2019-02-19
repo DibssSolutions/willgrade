@@ -10,10 +10,27 @@
   text-align: center
   background: none
   text-transform: uppercase
+  transition: color $tr, background-color $tr, border-color $tr
   &_blue
     color: $blue
+    border: 1px solid $blue
+    .btn__text
+      color: $blue
+  &_white
+    // border: 1px solid $textLight
+    +hover
+      background-color: $textLight
+      .btn__text
+        color: $blue
+      &:active
+        background-color: $grey
+        .btn__text
+          color: $blue
+    .btn__text
+      color: $textLight
   &_solid
     background-color: $textLight
+    border: 1px solid $textLight
     transition: background-color $tr
     +hover
       background-color: $white
@@ -22,11 +39,7 @@
   &_animated
     position: relative
     .btn__text
-      position: relative
-      z-index: 5
       opacity: 0
-      color: $white
-      animation: fadeIn 0.3s 1.4s forwards ease-out
     svg
       +coverdiv
       z-index: 2
@@ -34,52 +47,83 @@
       width: 280px
       fill: none
       stroke: $white
-      animation: drawBtn 0.5s 1s forwards ease-in
       stroke-dasharray: 1432
       stroke-dashoffset: 1432
-
+    &.is-animate 
+      .btn__text
+        animation: fadeIn 0.3s 0.3s forwards ease-out
+      svg
+        animation: drawBtn 0.5s forwards ease-in
+  &__text
+    position: relative
+    z-index: 5
+    
 .circle-btn
   background-color: transparent
   font-size: 0
-  cursor: default
-  // &:hover
-  //   .normal
-  //     +fadeout($tr)
-  //   .hovered
-  //     +fadein
-  //   .circle-btn__text_hidden
-  //     +fadein
-  //     pointer-events: inherit
+  // cursor: default
+  &.is-animate
+    .normal-circle,
+    .circle-btn__circle
+      animation: drawBtn 0.5s forwards ease-in
+    .normal-image,
+    .circle-btn__sprite-icon
+      animation: fadeIn 0.3s 0.4s forwards ease-out
+    .circle-btn__text_animated
+      animation: fadeIn 0.3s 0.4s forwards ease-out
+  &:hover
+    .normal
+      +fadeout($tr)
+    .hovered
+      +fadein
+    .circle-btn__text_hidden
+      +fadein
+      pointer-events: inherit
+    .normal_blue
+      +fadein
+      fill: $blue
+    .normal-download-icon
+      fill: $white
+    .circle-btn__circle
+      fill: $white
+    .circle-btn__sprite-icon
+      color: $blue
+  &_download
+    .circle-btn__icon:after
+      content: ''
+      position: absolute
+      top: -50px
+      left: -50px
+      width: 150px
+      bottom: -50px
+      border-radius: 50%
+      z-index: 1
   &__icon
     display: inline-block
     vertical-align: middle
     width: 50px
     height: 50px
     cursor: pointer
-    // .circle-btn_download &
-    //   position: relative
-    //   &:after
-    //     content: ''
-    //     position: absolute
-    //     top: -50px
-    //     left: -50px
-    //     right: -50px
-    //     bottom: -50px
-    //     border-radius: 50%
-    //     background-color: rgba(red, 0.3)
-    &:hover
-      .normal
-        +fadeout($tr)
-      .hovered
-        +fadein
-      ~ .circle-btn__text_hidden
-        +fadein
-        pointer-events: inherit
-      .normal_blue
-        +fadein
-        fill: $blue
-      .normal-download-icon
-        fill: $white
+    position: relative
+    // &:hover
+    //   .normal
+    //     +fadeout($tr)
+    //   .hovered
+    //     +fadein
+    //   ~ .circle-btn__text_hidden
+    //     +fadein
+    //     pointer-events: inherit
+    //   .normal_blue
+    //     +fadein
+    //     fill: $blue
+    //   .normal-download-icon
+    //     fill: $white
+  &__circle
+    stroke: $white
+    stroke-width: 1px
+    fill: none
+    stroke-dasharray: 158
+    stroke-dashoffset: 158
   .normal
     stroke: $white
     stroke-width: 1px
@@ -89,13 +133,16 @@
   .normal-circle
     stroke-dasharray: 158
     stroke-dashoffset: 158
-    animation: drawBtn 0.5s 1s forwards ease-in
   .normal-image
     opacity: 0
-    animation: fadeIn 0.3s 1.4s forwards ease-out
   .normal-download-icon
     fill: $blue
     stroke: none
+  &__sprite-icon
+    +vcenter
+    opacity: 0
+    .icon
+      font-size: 20px
   .hovered
     +fadeout(tr)
     &_white
@@ -110,14 +157,14 @@
     font-size: 16px
     font-weight: 600
     line-height: normal
-    letter-spacing: -0.1px
+    letter-spacing: -0.006em
     color: $textLight
     text-transform: uppercase
+    opacity: 0
     .circle-btn_download &
       color: $blue
     &_hidden
       +fadeout(0.6s)
-      pointer-events: none
 
 @keyframes drawBtn
   to 

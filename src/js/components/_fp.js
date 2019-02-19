@@ -1,3 +1,4 @@
+import { ANIMATE } from '../constants';
 /* eslint-disable */
 import IScroll from "iscroll";
 window.IScroll = IScroll;
@@ -11,7 +12,7 @@ $(document).ready(function() {
 
   new IScroll("section");
 
-  $(".out").fullpage({
+  $(".fullpage").fullpage({
     responsiveWidth: 10,
     responsiveHeight: 10,
     scrollingSpeed: 2000,
@@ -21,20 +22,28 @@ $(document).ready(function() {
     resize: false,
     fixedElements: ".js-header",
     menu: "#myMenu",
-    navigation: true,
-    fitToSection: false,
+    // navigation: true,
+    // fitToSection: false,
     // paddingTop: 135,
 
-    // onLeave: function(origin, destination, direction) {
-    //   var leavingSection = this;
-    //   console.log(origin, destination, direction);
-    //   var header = $(".js-header");
-    //   if (origin == 1 && direction == "down") {
-    //     header.removeClass("is-transparent");
-    //   } else if (destination === 1 && direction == "up") {
-    //     header.addClass("is-transparent");
-    //   }
-    // }
+    onLeave: function(origin, destination, direction) {
+      var leavingSection = this;
+      console.log(origin, destination, direction);
+      var header = $(".js-header");
+      var headerBtn = $(".js-header-btn");
+      if (origin == 1 && direction == "down") {
+        header.removeClass("is-transparent");
+        headerBtn.removeClass("btn_solid").addClass("btn_blue");
+      } else if (destination === 1 && direction == "up") {
+        header.addClass("is-transparent");
+        headerBtn.removeClass("btn_blue").addClass("btn_solid");
+      }
+    },
+    afterLoad: function(origin, destination, direction) {
+      var loadedSection = this;
+      var buttons = $(loadedSection).find(".js-animated-btn");
+      buttons.each((index, el) => $(el).addClass(ANIMATE));
+    }
   });
   // afterRender: () => {
   //   $.fn.fullpage.setAllowScrolling(false);

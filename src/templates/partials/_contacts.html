@@ -33,9 +33,58 @@
               </div>
             {% endfor %}
         </div>
+        <div class="section__splitter-horiz section__splitter-horiz_white"></div>
+        <div class="section__connections">
+          <div class="connection">
+            <div class="connection__text">
+                +79 (919) 111 99 19
+            </div>
+            <div class="connection__links">
+              <span class="connection__link">
+                  {{ mixins.connectionBtn('telegram') }}
+              </span>
+              <span class="connection__link">
+                  {{ mixins.connectionBtn('whatsapp') }}
+              </span>
+            </div>
+          </div>
+          <div class="connection">
+              <div class="connection__text">
+                  willgrade
+              </div>
+              <div class="connection__links">
+                <span class="connection__link">
+                  {{ mixins.connectionBtn('skype') }}
+                </span>
+              </div>
+            </div>
+        </div>
       </div>
-      <div class="section__right" style='background-image: url(img/map.png);'>
-        
+      <div class="section__right">
+        <img class="section__map" src="img/map.png" alt="map">
+          {# style='background-image: url(img/map.png);' #}
+        {% for marker in [
+          {
+            text: 'Лондон',
+            top: '44.8%',
+            left: '36%'
+          },
+          {
+            text: 'Цюрих',
+            top: '47%',
+            left: '41.3%'
+          },
+          {
+            text: 'Москва',
+            top: '42%',
+            left: '49.7%'
+          }
+        ] %}
+          <div class="map-marker" style="top: {{ marker.top }}; left: {{ marker.left }}">
+            <div class="map-marker__icon">{{ mixins.icon('map-marker') }}</div>
+            <div class="map-marker__title">{{ marker.text }}</div>
+          </div>
+        {% endfor %}
       </div>
     </div>
   </div>

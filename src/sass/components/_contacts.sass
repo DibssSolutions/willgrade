@@ -22,3 +22,33 @@
     font-weight: 300
     line-height: 1
 
+.connection
+  display: flex
+  align-items: center
+  &__text
+    min-width: 208px
+    font-family: $gilroy
+    font-size: 21px
+    font-weight: 700
+    font-style: normal
+    font-stretch: normal
+    line-height: 1.2
+    letter-spacing: -0.005em
+    color: $white
+  &__link
+    &:not(:last-child)
+      margin-right: 21px
+
+.map-marker
+  position: absolute
+  text-align: center
+  font-size: 0
+  &__icon
+    .icon
+      font-size: 17px
+  &__title
+    font-size: 16px
+    font-weight: 900
+    line-height: 1
+    letter-spacing: -0.006em
+    color: $textLight
