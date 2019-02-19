@@ -121,7 +121,10 @@
     +flex-size(44.5%)
   .section__right
     +flex-size(55.5%)
-  +hover
+  
+  .is-active-investment &
+    transform: translateY(50vh)
+  .is-active-development &
     transform: translateY(-50vh)
 
 .section_investment
@@ -140,5 +143,17 @@
   height: calc(100vh - 135px)
   position: relative
   z-index: 5
-  margin-top: 92px
+  margin-top: 227px
+  .section__outer
+    padding-top: 0
+.outer
+  .inner
+    position: relative
+  &__trigger
+    position: absolute
+    top: 0
+    left: 0
+    z-index: 5
+    width: 235px
+    height: 100%
 
