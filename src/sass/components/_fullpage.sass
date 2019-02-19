@@ -1,51 +1,116 @@
-// .fullpage-wrapper 
-//     position: absolute !important
-//     top: 0
-//     left: 0
-//     width: 100%
-//     height: 100% !important
-//     overflow: hidden
-//     z-index: 3
-//     transform: none !important
-//     min-height: 100% !important
-//     +sm 
-//         overflow: auto
-//         // margin-top: $main-margin-top-sm
-//         height: auto !important
-//         position: relative !important
-
-// section
-//     position: absolute !important
-//     top: 0
-//     left: 0
-//     width: 100%
-//     height: 100% !important
-//     opacity: 0
-//     visibility: hidden
-//     transition: opacity 0.5s ease-out, visibility 0.5s ease-out
-//     overflow: auto
-//     &.active 
-//         opacity: 1
-//         visibility: visible
-//     .fp-tableCell
-//         +sm 
-//             display: block
-//             height: auto !important
-//     +sm 
-//         opacity: 1
-//         visibility: visible
-//         position: relative !important
-//         height: auto !important
-
 .sections-wrapper
   position: relative
   overflow-x: hidden
-  // margin-bottom: -135px
-  // .fp-scrollable, .fp-scroller
-  //   overflow: visible
 
 .iScrollIndicator
   background-color: $blue !important
+
+.section
+  // height: calc(100vh - 135px) !important
+  // padding-top: 135px
+  &__outer
+
+  &__inner
+    height: calc(100vh - 135px)
+    // min-height: 100vh
+    display: flex
+    flex-wrap: wrap
+    // margin: 0 -15px
+  &__left
+    +flex-size(27.5%)
+    padding: 0 88px 0 0
+    &_border
+      position: relative
+      &:after
+        content: ''
+        position: absolute
+        right: 0
+        top: 45px
+        bottom: 37px
+        width: 1px
+        background-color: $textLight
+  &__right
+    +flex-size(72.5%)
+    padding-left: 156px
+    position: relative
+  &__splitter-horiz
+    height: 1px
+    width: 100%
+    background-color: $text
+    &_white
+      background-color: $textLight
+  &__title-lg
+    margin-bottom: 60px
+  &__title-md
+    margin-top: 210px
+    margin-bottom: 50px
+  .section__text
+    margin-bottom: 60px
+    p:not(:last-child)
+      margin-bottom: 24px
+  .fp-tableCell
+    vertical-align: top
+  &_selling
+    .section__left
+      +cover
+    .section__text
+      margin-top: 50px
+      p:not(:last-child)
+        margin-bottom: 24px
+  &__download-btn
+    display: inline-block
+    position: relative
+    height: 50px
+    &:after
+      content: ''
+      position: absolute
+      top: -50px
+      left: -50px
+      width: 150px
+      bottom: -50px
+      border-radius: 50%
+      background-color: rgba(red, 0.1)
+      z-index: 1
+    .circle-btn
+      position: relative
+      z-index: 3
+  &__hr-btn
+    margin-top: 103px
+  &_investment,
+  &_career
+    .section__inner
+      background-color: $darkBg
+      background-position: 0 100%
+      background-repeat: no-repeat
+  &_development
+    .section__inner
+      background-color: $textLight
+  &_contacts
+    color: $white
+    .section__inner
+      background-color: $blue
+    .section__right
+      // background-color: $darkBlue
+      padding-left: 0
+      background-position: center
+      background-size: contain
+      // background-position: 0 0
+      // background-size: cover
+      +cover
+  &__adress
+    margin-bottom: 60px
+    .adress:not(:last-child)
+      margin-bottom: 24px
+  &__contacts-title
+    margin-top: 100px
+    margin-bottom: 50px
+  &__connections
+    margin-top: 50px
+    .connection
+      &:not(:last-child)
+        margin-bottom: 20px
+  &__map
+    max-width: 100%
 
 .section_development
   position: absolute
@@ -56,7 +121,7 @@
   min-height: inherit
   height: calc(100vh - 135px)
   transition: transform 0.5s
-  &:hover
+  +hover
     transform: translateY(-50vh)
 
 .section_investment
@@ -71,3 +136,4 @@
   position: relative
   z-index: 5
   margin-top: 92px
+
