@@ -6,7 +6,7 @@
       <div class="section__inner inner">
 				<div class="section__left">
 					<div class="section__title-lg">
-						<h2 class="title-lg">{{ props.title }}</h2>
+						<h2 class="title-lg">{{ props.title | safe }}</h2>
 					</div>
           <div class="section__splitter-horiz"></div>
           <div class="section__text">{{ props.text | safe }}</div>

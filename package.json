@@ -15,6 +15,7 @@
   },
   "authors": "<DibssSolutions>",
   "devDependencies": {
+    "@fancyapps/fancybox": "3.3.5",
     "autoprefixer": "^6.3.3",
     "babel-core": "^6.18.2",
     "babel-eslint": "^7.2.3",
@@ -66,6 +67,7 @@
     "webpack-bundle-analyzer": "^1.5.3"
   },
   "dependencies": {
-    "iscroll": "^5.2.0"
+    "iscroll": "^5.2.0",
+    "rebound": "^0.1.0"
   }
 }

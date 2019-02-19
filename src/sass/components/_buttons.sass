@@ -12,8 +12,13 @@
   text-transform: uppercase
   transition: color $tr, background-color $tr, border-color $tr
   &_blue
-    color: $blue
     border: 1px solid $blue
+    +hover
+      background-color: $blue
+      .btn__text
+        color: $textLight
+      &:active
+        background-color: #0051c3
     .btn__text
       color: $blue
   &_white
@@ -46,9 +51,16 @@
       height: 80px
       width: 280px
       fill: none
-      stroke: $white
       stroke-dasharray: 1432
       stroke-dashoffset: 1432
+    &.btn_blue
+      border: none
+      svg
+        stroke: $blue
+    &.btn_white
+      border: none
+      svg
+        stroke: $textLight
     &.is-animate 
       .btn__text
         animation: fadeIn 0.3s 0.3s forwards ease-out
@@ -89,15 +101,18 @@
     .circle-btn__sprite-icon
       color: $blue
   &_download
-    .circle-btn__icon:after
-      content: ''
-      position: absolute
-      top: -50px
-      left: -50px
-      width: 150px
-      bottom: -50px
-      border-radius: 50%
-      z-index: 1
+    // +vcenter
+    // position: absolute
+
+    // .circle-btn__icon:after
+    //   content: ''
+    //   position: absolute
+    //   top: -50px
+    //   left: -50px
+    //   width: 150px
+    //   bottom: -50px
+    //   border-radius: 50%
+    //   z-index: 1
   &__icon
     display: inline-block
     vertical-align: middle
@@ -163,6 +178,11 @@
     opacity: 0
     .circle-btn_download &
       color: $blue
+      position: absolute
+      top: 50%
+      left: 100%
+      transform: translateY(-50%)
+      min-width: 200px
     &_hidden
       +fadeout(0.6s)
 

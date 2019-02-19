@@ -1,6 +1,7 @@
 import './_fp';
 import './_load';
-// import './_download-btn';
+import './_initFancy';
+import './_download-btn';
 
 import { pathLength } from '../utils';
 

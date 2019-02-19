@@ -29,6 +29,9 @@
         bottom: 37px
         width: 1px
         background-color: $textLight
+    &_border-dark
+      &:after
+        background-color: $text
   &__right
     +flex-size(72.5%)
     padding-left: 156px
@@ -40,39 +43,32 @@
     &_white
       background-color: $textLight
   &__title-lg
-    margin-bottom: 60px
+    margin-bottom: 55px
   &__title-md
-    margin-top: 210px
-    margin-bottom: 50px
+    margin-top: 200px
+    margin-bottom: 43px
   .section__text
-    margin-bottom: 60px
+    margin-bottom: 52px
     p:not(:last-child)
-      margin-bottom: 24px
+      margin-bottom: 28px
   .fp-tableCell
     vertical-align: top
   &_selling
     .section__left
       +cover
     .section__text
-      margin-top: 50px
-      p:not(:last-child)
-        margin-bottom: 24px
+      margin-top: 40px
   &__download-btn
-    display: inline-block
+    // display: inline-block
     position: relative
-    height: 50px
-    &:after
-      content: ''
-      position: absolute
-      top: -50px
-      left: -50px
-      width: 150px
-      bottom: -50px
-      border-radius: 50%
-      background-color: rgba(red, 0.1)
-      z-index: 1
+    // height: 50px
+    display: block
+    height: 100px
+    width: 100px
     .circle-btn
-      position: relative
+      position: absolute
+      top: 25px
+      left: 25px
       z-index: 3
   &__hr-btn
     margin-top: 103px
@@ -90,13 +86,9 @@
     .section__inner
       background-color: $blue
     .section__right
-      // background-color: $darkBlue
+      background-color: $darkBlue
       padding-left: 0
-      background-position: center
-      background-size: contain
-      // background-position: 0 0
-      // background-size: cover
-      +cover
+      +vertical
   &__adress
     margin-bottom: 60px
     .adress:not(:last-child)
@@ -111,6 +103,9 @@
         margin-bottom: 20px
   &__map
     max-width: 100%
+    display: inline-block
+    vertical-align: middle
+    
 
 .section_development
   position: absolute
@@ -121,6 +116,10 @@
   min-height: inherit
   height: calc(100vh - 135px)
   transition: transform 0.5s
+  .section__left
+    +flex-size(44.5%)
+  .section__right
+    +flex-size(55.5%)
   +hover
     transform: translateY(-50vh)
 

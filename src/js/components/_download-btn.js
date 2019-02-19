@@ -1,84 +1,76 @@
-var downloadFields = $('.js-download-field');
+// import { rebound } from 'rebound';
+var rebound = require('rebound');
 
-downloadFields.each((index, el) => {
-  var field = $(el);
-  var btn = field.find('.js-download-btn');
-  // field.on('mouseenter', e => startMovingBtn(btn, e));
-  field.on('mousemove', e => {
-    // document.body.appendChild(btn[0]);
-    btn.css({
-      position: 'absolute',
-      // left: e.clientX - btn.width() / 2,
-      // top: e.clientY - btn.height() / 2,
-      left: e.clientX,
-      top: e.clientY,
-      zIndex: 100
-    });
-    // field.on('mouseleave', e => unfollowBtn(btn, e));
+// Elements
+var magneticAreaElements = document.querySelectorAll('.js-download-field');
+[... magneticAreaElements].forEach(el => {
+  var magneticAreaEl = el;
+  var buttonEl = el.querySelector('.js-download-btn');
+
+  // Cached sizes of things, so we don't force reflow
+  var buttonBounds = buttonEl.getBoundingClientRect();
+  var buttonWidth = buttonBounds.width;
+  var buttonHeight = buttonBounds.height;
+  
+  var magneticBounds = magneticAreaEl.getBoundingClientRect();
+  var magneticWidth = magneticBounds.width;
+  var magneticHeight = magneticBounds.height;
+  var magneticRadius = magneticWidth / 2;
+  
+  // ReboundJS stuff for the springy goodness
+  var springSystem = new rebound.SpringSystem();
+  var spring = springSystem.createSpring(100, 7);
+  
+  console.log(magneticBounds, magneticRadius);
+  
+  var cursorPosition = {
+    x: 0,
+    y: 0
+  };
+  
+  spring.addListener({
+    onSpringUpdate: function onSpringUpdate(spring) {
+      var val = spring.getCurrentValue();
+      val = rebound.MathUtil.mapValueInRange(val, 0, 1, 0, 1);
+      move(buttonEl, val);
+    }
   });
+  
+  magneticAreaEl.addEventListener('mousemove', function(ev) {
+    // cursorPosition.x = ev.pageX - ev.currentTarget.offsetLeft - magneticWidth / 2;
+    // cursorPosition.y = ev.pageY - ev.currentTarget.offsetTop - magneticHeight / 2;
+    cursorPosition.x = ev.pageX - ev.currentTarget.offsetLeft - magneticWidth / 2;
+    cursorPosition.y = ev.pageY - ev.currentTarget.offsetTop - magneticHeight / 2;
+    console.log(cursorPosition, ev.currentTarget.offsetLeft);
+  
+    var distance = Math.sqrt(
+      Math.pow(cursorPosition.x, 2) + Math.pow(cursorPosition.y, 2)
+    ); // Cursor distance from original centre
+    console.log(distance);
+    if (distance > magneticRadius) {
+      spring.setEndValue(0);
+      return;
+    }
+  
+    var distanceRatio = 1 - distance / magneticRadius;
+    var attraction = Math.abs(1 / (1 - Math.pow(distanceRatio * 10, 2)) - 1); // inverse-square style falloff - rapid increase in attraction as the distance decreases
+    attraction = Math.max(0, Math.min(1, attraction)); // Bound to reasonable values
+    spring.setEndValue(attraction);
+  
+    if (spring.isAtRest()) {
+      // wake up the spring
+      // TODO: this may not be be the best way to do this
+      spring.setVelocity(1);
+    }
+  });
+  
+  function move(el, val) {
+    var x = val * cursorPosition.x;
+    var y = val * cursorPosition.y;
+    console.log(x, y);
+    el.style.transform = 'translate(' + x + 'px, ' + y + 'px)';
+    // buttonIconEl.style.transform =
+    //   'translate(' + -x / 4 + 'px, ' + -y / 4 + 'px)';
+  }
 });
 
-// function startMovingBtn(btn, e) {
-//   // var position = getCoords(btn);
-//   // console.log(position);
-//   // const moveAt = e => {
-//   //   let _btn = btn[0];
-//   //   _btn.style.left = e.pageX - _btn.offsetWidth / 2 + 'px';
-//   //   _btn.style.top = e.pageY - _btn.offsetHeight / 2 + 'px';
-//   // };
-//   let _top = e.clientY;
-//   let _left = e.clientX;
-//   btn.css({ position: 'absolute', top: _top, left: _left });
-//   // moveAt(e);
-
-//   // переместим в body, чтобы мяч был точно не внутри position:relative
-//   document.body.appendChild(btn[0]);
-// }
-
-// function getCoords(elem) {
-//   var box = elem[0].getBoundingClientRect();
-//   return {
-//     top: box.top + pageYOffset,
-//     left: box.left + pageXOffset
-//   };
-// }
-
-// ball.onmousedown = function(e) {
-
-//   var coords = getCoords(ball);
-//   var shiftX = e.pageX - coords.left;
-//   var shiftY = e.pageY - coords.top;
-
-//   ball.style.position = 'absolute';
-//   document.body.appendChild(ball);
-//   moveAt(e);
-
-//   ball.style.zIndex = 1000; // над другими элементами
-
-//   function moveAt(e) {
-//     ball.style.left = e.pageX - shiftX + 'px';
-//     ball.style.top = e.pageY - shiftY + 'px';
-//   }
-
-//   document.onmousemove = function(e) {
-//     moveAt(e);
-//   };
-
-//   ball.onmouseup = function() {
-//     document.onmousemove = null;
-//     ball.onmouseup = null;
-//   };
-
-// }
-
-// ball.ondragstart = function() {
-//   return false;
-// };
-
-// function getCoords(elem) {   // кроме IE8-
-//   var box = elem.getBoundingClientRect();
-//   return {
-//     top: box.top + pageYOffset,
-//     left: box.left + pageXOffset
-//   };
-// }
