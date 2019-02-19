@@ -106,6 +106,22 @@ $(document).ready(function() {
 
   //   var loadedSection = this;
   //   fpAnimation(loadedSection);
+
+  const wrap = $('.js-sections-wrapper');
+  const sectionDev = $('.js-section-development');
+  const sectionInv = $('.js-section-investment');
+  sectionInv.hover(function(){
+    wrap.addClass('is-active-investment')
+  }, function(){
+    wrap.removeClass('is-active-investment')
+  });
+
+  sectionDev.hover(function(){
+    wrap.addClass('is-active-development')
+  }, function(){
+    wrap.removeClass('is-active-development')
+  });
+
 });
 //   }
 // });
