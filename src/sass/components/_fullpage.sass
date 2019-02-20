@@ -1,10 +1,6 @@
-.fullpage
-  min-width: 1920px
 .fp-enabled
   .fp-tableCell, .header
     +clr
-  .outer
-    float: right
 
 .sections-wrapper
   position: relative
@@ -23,6 +19,16 @@
     .section__inner
       background-position: -4px 100%
   &_career
+    pointer-events: auto
+    min-height: inherit
+    min-height: calc(100vh - 135px)
+    position: relative
+    z-index: 2
+    margin-top: 92px
+    +hover
+      z-index: 3
+    .section__outer
+      padding-top: 0
     .section__inner
       background-position: 47px 180px
       background-size: 422px 780px
@@ -32,6 +38,7 @@
       letter-spacing: 0.04em
       line-height: 1.28
     .section__inner
+      padding-left: 77px
       background-color: $blue
     .section__right
       background-color: $darkBlue
@@ -40,18 +47,19 @@
   &_development
     height: auto
     position: absolute
-    margin-top: 140px
+    margin-top: 85px
     top: 50vh
     left: 12.1%
     z-index: 1
     width: 100%
     min-height: inherit
-    height: calc(100vh - 135px)
+    min-height: calc(100vh - 135px)
     +hover
       z-index: 3
     .section__outer
       padding-top: 0
     .section__inner
+      padding-left: 77px
       background-color: $textLight
     .section__left
       +flex-size(44.5%)
@@ -60,29 +68,17 @@
   &_investment
     position: relative
     min-height: inherit
-    height: calc(100vh - 135px)
     z-index: 0
     +hover
       z-index: 3
     .section__title-md
       max-width: 700px
-  &_career
-    pointer-events: auto
-    min-height: inherit
-    height: calc(100vh - 135px)
-    position: relative
-    z-index: 2
-    margin-top: 227px
-    +hover
-      z-index: 3
-    .section__outer
-      padding-top: 0
       
 
   &__outer
     padding-top: 135px
   &__inner
-    height: calc(100vh - 135px)
+    min-height: calc(100vh - 135px)
     display: flex
     flex-wrap: wrap
   &__left
@@ -170,14 +166,4 @@
     max-width: 100%
     display: inline-block
     vertical-align: middle
-
-
-.outer
-  &__trigger
-    position: absolute
-    top: 0
-    left: 0
-    z-index: 5
-    width: 235px
-    height: 100%
 

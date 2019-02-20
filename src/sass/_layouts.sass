@@ -2,11 +2,20 @@
 	position: relative
 	overflow: hidden
 .outer
-  // float: right
-  max-width: 1840px
-  padding: 0 30px
-  width: 100%
+	margin: 0 auto
+	max-width: 1920px
+	padding: 0 30px
+	+clr
+	&__trigger
+		position: absolute
+		top: 0
+		left: 0
+		z-index: 5
+		width: 235px
+		height: 100%
 
 .inner
-  padding-left: 77px
+	float: right
+	max-width: 1705px
+	width: 100%
 
