@@ -16,6 +16,9 @@
       background-color: $darkBg
     .section__left
       background-repeat: no-repeat
+    +sm
+      .section__outer
+        padding-top: 37px
   &_investment
     .section__left
       +flex-size(32.1%)
@@ -31,6 +34,7 @@
     margin-top: 92px
     +md
       min-height: calc(100vh - 121px)
+      margin-top: 0
     +hover
       z-index: 3
     .section__outer
@@ -69,6 +73,11 @@
     min-height: calc(100vh - 135px)
     +xl
       min-height: calc(100vh - 121px)
+    +md
+      position: static
+      margin-top: 0
+      .section__outer
+        padding-top: 37px
     +hover
       z-index: 3
     .section__outer
@@ -94,6 +103,7 @@
   &__outer
     padding-top: 135px
     +xl
+    +md
       padding-top: 120px
   &__inner
     min-height: calc(100vh - 135px)
@@ -101,11 +111,16 @@
     flex-wrap: wrap
     +xl
       min-height: calc(100vh - 121px)
+    +sm 
+      flex-direction: column
   &__left
     +flex-size(472px)
     padding: 0 88px 0 0
     +xxl
       padding-right: 30px
+    +md
+      +flex-size(391px)
+      padding-right: 66px
     &_border
       position: relative
       &:after
@@ -128,6 +143,8 @@
       padding-left: 100px
       background-position: center
       background-size: cover
+    +md
+      
     .section_contacts &
       overflow: hidden
   &__splitter-horiz

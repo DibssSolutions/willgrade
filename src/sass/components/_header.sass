@@ -7,6 +7,8 @@
   z-index: 20
   background-color: $white
   transition: background-color 0.5s
+  +md
+    padding: 20px 0
   .outer
     +xxl
       min-height: 0
@@ -15,6 +17,7 @@
       font-size: 16px
     +lm
       font-size: 14px
+      
   &.is-transparent
     background-color: transparent
     .header__logo
@@ -30,15 +33,18 @@
     display: flex
     flex-wrap: wrap
     align-items: center
+    font-size: 0
     +xl
       margin-left: 20px
   &__logo
     font-size: 0
     +lm
       margin-right: auto
-      margin-left: 15px
+      margin-left: 48px
       position: relative
       z-index: 10
+    +md
+      margin-left: 0
   &__tel
     display: inline-block
     vertical-align: middle
@@ -46,13 +52,20 @@
     color: $blue
     +lg
       margin-right: 20px
+    +sm
+      display: none
   &__burger
     display: none
     position: relative
     z-index: 10
     +lm
       display: block
-
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+      left: 30px
+    +md
+      left: 20px
   &__nav
     +lm
       position: absolute
@@ -62,7 +75,7 @@
       min-height: 100vh
       display: flex
       align-items: center
-      padding: 40px 40px 40px 20px
+      padding: 40px 60px 40px 40px
       transform: translateX(-101%)
       background-color: $white
       transition: transform $tr
@@ -87,6 +100,8 @@
   &__link
     color: $textBlack
     transition: color .3s
+    +lm
+      font-size: 18px
     .is-transparent &
       +hover
         color: $white 
@@ -111,6 +126,8 @@
     max-width: 180px
   +lm
     max-width: 140px
+  +sm
+    max-width: 100%
 
 .burger 
   width: 27px

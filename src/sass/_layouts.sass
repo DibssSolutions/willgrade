@@ -1,26 +1,31 @@
 .out
-	position: relative
-	overflow: hidden
+  position: relative
+  overflow: hidden
 .outer
-	margin: 0 auto
-	max-width: 1920px
-	padding: 0 30px
-	+clr
-	+xxl
-		min-height: calc(100vh - 121px) 
-		display: flex
-		flex-wrap: wrap 
-		align-items: center
-	&__trigger
-		position: absolute
-		top: 0
-		left: 0
-		z-index: 5
-		width: 235px
-		height: 100%
+  margin: 0 auto
+  max-width: 1920px
+  padding: 0 30px
+  +clr
+  +xxl
+    min-height: calc(100vh - 121px) 
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+  +md
+    padding: 0 20px
+    // min-height: inherit
+  &__trigger
+    position: absolute
+    top: 0
+    left: 0
+    z-index: 5
+    width: 235px
+    height: 100%
 
 .inner
-	float: right
-	max-width: 1705px
-	width: 100%
+  float: right
+  max-width: 1705px
+  width: 100%
+  +md
+    padding-left: 46px
 
