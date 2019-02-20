@@ -7,7 +7,14 @@
     +xxl
       min-height: 100vh
       padding-top: 125px
-      padding-bottom: 30px
+      padding-bottom: 52px
+    +md
+      padding-top: 120px
+      padding-bottom: 52px
+    +sm
+      padding-top: 170px
+      padding-bottom: 52px
+      margin-bottom: 76px
   &__content
     // width: 50%
     width: 100%
@@ -19,12 +26,21 @@
     margin-bottom: 100px
     +xxl
       margin-bottom: 50px 
+    +md
+      margin-bottom: 86px
+      max-width: 388px
+    +sm 
+      max-width: 235px
+    img
+      max-width: 100%
+      display: block
   &__title
     color: $textBlack
     margin-right: -10px
     margin-bottom: 43px
     +md
       max-width: 600px
+      margin-bottom: 36px
   &__descr
     margin-bottom: 87px
     line-height: 1.555
@@ -33,7 +49,9 @@
     +xxl
       margin-bottom: 70px
     +md
+      max-width: 450px
       font-size: 16px
+      margin-bottom: 85px
   &__actions
     display: flex
     align-items: center
@@ -50,8 +68,3 @@
     +md
       margin-bottom: 50px
       margin-right: 0
-  &__logo
-    +md
-      max-width: 388px
-    img
-      max-width: 100%
