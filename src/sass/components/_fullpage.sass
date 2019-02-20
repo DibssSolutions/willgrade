@@ -146,12 +146,14 @@
     .section__inner
       padding-left: 77px
       background-color: $textLight
-      +sm
+      +md
         padding-left: 43px
     .section__left
       +flex-size(764px)
       +lm
         +flex-size(50%)
+      +md
+        +flex-size(460px)
       +sm
         padding-right: 45px
         padding-bottom: 80px 
@@ -159,6 +161,8 @@
     .section__right
       +lm
         +flex-size(50%)
+      +md
+        +flex-size(calc(100% - 460px))
       +sm
         margin-left: -30px
         margin-right: 30px
@@ -177,9 +181,10 @@
       +sm
         margin-top: 0
     .section__development-btn
-      margin-left: -32px
-      margin-right: -32px
-      text-align: center
+      +sm
+        margin-left: -32px
+        margin-right: -32px
+        text-align: center
   &_selling
     .section__title-lg
       margin-top: 26px
@@ -248,6 +253,8 @@
     &_border-dark
       &:after
         background-color: $text
+        +md
+          display: none
   &__right
     padding-left: 156px
     flex-grow: 1
