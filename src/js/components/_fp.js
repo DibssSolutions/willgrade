@@ -13,8 +13,10 @@ $(document).ready(function() {
 
   function fp() {
     if ($(window).width() < 1023) {
-      $.fn.fullpage.destroy("all");
-      $(".js-fullpage").removeClass(INIT);
+      if ($(".js-fullpage").hasClass(INIT)) {
+        $.fn.fullpage.destroy("all");
+        $(".js-fullpage").removeClass(INIT);
+      }
     }
     if ($(window).width() > 1023) {
       if ($(".js-fullpage").hasClass(INIT)) return;
