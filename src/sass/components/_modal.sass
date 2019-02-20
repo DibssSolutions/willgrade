@@ -41,6 +41,8 @@
     background-color: $textLight
     max-width: 764px
     color: $text
+    +md 
+      max-width: 650px
     +sm
       max-width: 400px
   &__inner
@@ -51,6 +53,11 @@
     +flex-size(298px)
     padding: 0 40px 0 15px
     margin-top: auto
+    +md 
+      +flex-size(240px)
+    +sm 
+      padding: 0 50px 
+      max-width: 300px
     img
       max-width: 100%
     // background-position: center bottom
@@ -63,11 +70,14 @@
     flex-grow: 1
     +md
       padding: 20px
+    +sm 
       order: -1
   &__title
     margin-bottom: 30px
     margin-left: -4px
     line-height: 1
+    +md 
+      margin-bottom: 20px
   &__name
     margin-bottom: 10px
     line-height: 1
@@ -81,9 +91,13 @@
     background-color: $text
   &__connections
     margin-top: 36px
+    +sm 
+      margin-top: 16px
     .connection
       &:not(:last-child)
         margin-bottom: 22px
+        +sm 
+          margin-bottom: 16px
 
 
   
