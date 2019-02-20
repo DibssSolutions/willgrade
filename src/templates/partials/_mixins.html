@@ -32,16 +32,29 @@
 {% macro playBtn() %}
 <a href="https://www.youtube.com/watch?v=_sI_Ps7JSEk" class="circle-btn js-animated-btn js-fancybox">
   <span class="circle-btn__icon">
-    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+    {# <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
     viewBox="0 0 51 51">
       <g class='normal'>
         <path class="normal-circle" d="M25.5,0.5c-13.8,0-25,11.2-25,25s11.2,25,25,25s25-11.2,25-25S39.3,0.5,25.5,0.5z"/>
         <path class="normal-image" d="M34.1,26.8l-12.5,7.8c-0.3,0.2-0.5,0.2-0.8,0.2c-0.3,0-0.5-0.1-0.8-0.2c-0.5-0.3-0.8-0.8-0.8-1.4V17.7
           c0-0.6,0.3-1.1,0.8-1.4c0.5-0.3,1.1-0.3,1.6,0l12.5,7.8c0.5,0.3,0.7,0.8,0.7,1.3S34.6,26.5,34.1,26.8z"/>
       </g>
-      <g class="hovered hovered_white"> 
+      <g class="hovered hovered_white">
         <path d="M25.5,0.5c-13.8,0-25,11.2-25,25s11.2,25,25,25s25-11.2,25-25S39.3,0.5,25.5,0.5z M34.1,26.8l-12.5,7.8c-0.3,0.2-0.5,0.2-0.8,0.2c-0.3,0-0.5-0.1-0.8-0.2c-0.5-0.3-0.8-0.8-0.8-1.4V17.7
           c0-0.6,0.3-1.1,0.8-1.4c0.5-0.3,1.1-0.3,1.6,0l12.5,7.8c0.5,0.3,0.7,0.8,0.7,1.3S34.6,26.5,34.1,26.8z"/>
+      </g>
+    </svg> #}
+    
+    <svg width="51px" height="51px" viewBox="0 0 51 51" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+          <g fill-rule="nonzero" class='normal'>
+              <path class="normal-circle" d="M25.5,1.5 C12.2522847,1.5 1.5,12.2522847 1.5,25.5 C1.5,38.7477153 12.2522847,49.5 25.5,49.5 C38.7477153,49.5 49.5,38.7477153 49.5,25.5 C49.5,12.2522847 38.7477153,1.5 25.5,1.5 Z" stroke="#FFF" stroke-width="2"></path>
+              <path class="normal-image" d="M34.1,26.8 L21.6,34.6 C21.3,34.8 21.1,34.8 20.8,34.8 C20.5,34.8 20.3,34.7 20,34.6 C19.5,34.3 19.2,33.8 19.2,33.2 L19.2,17.7 C19.2,17.1 19.5,16.6 20,16.3 C20.5,16 21.1,16 21.6,16.3 L34.1,24.1 C34.6,24.4 34.8,24.9 34.8,25.4 C34.8,25.9 34.6,26.5 34.1,26.8 Z"  fill="#FFF"></path>
+          </g>
+          <g class="hovered hovered_white">
+              <path d="M25.5,0.5c-13.8,0-25,11.2-25,25s11.2,25,25,25s25-11.2,25-25S39.3,0.5,25.5,0.5z M34.1,26.8l-12.5,7.8c-0.3,0.2-0.5,0.2-0.8,0.2c-0.3,0-0.5-0.1-0.8-0.2c-0.5-0.3-0.8-0.8-0.8-1.4V17.7
+                c0-0.6,0.3-1.1,0.8-1.4c0.5-0.3,1.1-0.3,1.6,0l12.5,7.8c0.5,0.3,0.7,0.8,0.7,1.3S34.6,26.5,34.1,26.8z"/>
+            </g>
       </g>
     </svg>
   </span>
@@ -51,19 +64,13 @@
 {% endmacro %}
 
 {% macro animatedMainBtn(props) %}
-	<button class="btn btn_animated js-animated-btn{{ props.modifier }}" data-modal-control="contacts-modal">
-			<span class="btn__text">{{ props.text }}</span> 
-			<?xml version="1.0" encoding="utf-8"?>
-			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-				viewBox="0 0 280 80">
-			<g>
-				<!-- <rect x="0.5" y="0.5" class="st0" width="279" height="79"/> -->
-				<!-- <path d="M279,1v78H1V1H279 M280,0H0v80h280V0L280,0z"/>  -->
-				<!-- <path d="M280,0 H0v80 h280 V0 L280,0z"/> -->
-				<path d="M0,0 h280 v80 L0,80 z"/>
-			</g>
-			</svg>
-	</button>
+  <a href="#" class="btn btn_animated js-animated-btn {{ props.modifier }}" data-modal-control="contacts-modal">
+    <span class="btn__line"></span>
+    <span class="btn__line"></span>
+    <span class="btn__line"></span>
+    <span class="btn__line"></span>
+    <span class="btn__text">{{ props.text }}</span>
+  </a>
 {% endmacro %}
 
 {% macro downloadBtn() %}
@@ -78,7 +85,8 @@
           H14.8c-0.5,0-0.9-0.4-0.9-0.9s0.4-0.9,0.9-0.9h21.5c0.5,0,0.9,0.4,0.9,0.9C37.1,34.4,36.7,34.8,36.2,34.8z"/>
         </g> -->
         <g class='normal normal_blue'>
-          <path class="normal-circle" d="M25.5,0.5c-13.8,0-25,11.2-25,25s11.2,25,25,25s25-11.2,25-25S39.3,0.5,25.5,0.5z"/>
+          
+          <path class="normal-circle" d="M25.5,1.5 C12.2522847,1.5 1.5,12.2522847 1.5,25.5 C1.5,38.7477153 12.2522847,49.5 25.5,49.5 C38.7477153,49.5 49.5,38.7477153 49.5,25.5 C49.5,12.2522847 38.7477153,1.5 25.5,1.5 Z" stroke-width="2"></path>
           <g class="normal-download-icon normal-image">
             <path d="M25.5,29.2c-0.5,0-0.9-0.4-0.9-0.9V14.9c0-0.5,0.4-0.9,0.9-0.9s0.9,0.4,0.9,0.9v13.4C26.4,28.8,26,29.2,25.5,29.2z"/>
             <path d="M36.2,34.8H14.8c-0.5,0-0.9-0.4-0.9-0.9c0-0.5,0.4-0.9,0.9-0.9h21.5c0.5,0,0.9,0.4,0.9,0.9 C37.1,34.4,36.7,34.8,36.2,34.8z"/>
@@ -99,7 +107,7 @@
     <span class="circle-btn__icon">
       <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
       viewBox="0 0 51 51">
-        <path class="circle-btn__circle" d="M25.5,0.5c-13.8,0-25,11.2-25,25s11.2,25,25,25s25-11.2,25-25S39.3,0.5,25.5,0.5z"/>
+      <path class="circle-btn__circle" d="M25.5,1.5 C12.2522847,1.5 1.5,12.2522847 1.5,25.5 C1.5,38.7477153 12.2522847,49.5 25.5,49.5 C38.7477153,49.5 49.5,38.7477153 49.5,25.5 C49.5,12.2522847 38.7477153,1.5 25.5,1.5 Z" stroke="#FFF" stroke-width="2"></path>
       </svg>
       <span class="circle-btn__sprite-icon">{{ icon(iconname) }}</span>
     </span>
