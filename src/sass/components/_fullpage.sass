@@ -16,6 +16,19 @@
       background-color: $darkBg
     .section__left
       background-repeat: no-repeat
+  &_investment,
+  &_career,
+  &_development
+    .section__inner
+      +sm
+        flex-direction: column
+    .section__right,
+    .section__left
+      +sm
+        +flex-size(100%)
+    .section__right
+      +sm
+        padding-right: 30px 
   &_investment
     position: relative
     min-height: inherit
@@ -260,6 +273,9 @@
     +xl
       margin-top: -25px
       margin-bottom: -25px
+    +sm
+      margin-top: -30px
+      margin-bottom: -30px
   &__download-btn-area
     position: relative
     display: block
@@ -277,6 +293,9 @@
       margin-top: 30px
     +md
       margin-top: 60px
+    +sm
+      margin-left: -31px
+      margin-right: -31px
   &__adress
     margin-bottom: 60px
     +xxl
