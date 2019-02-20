@@ -53,11 +53,17 @@
     .section__left
       background-position: 47px 180px
       background-size: 422px 780px
-      +xxl
-    .section__left
       +flex-size(32.1%)
+      +md
+        +flex-size(33%)
+        background-position: -11px 191px
+        background-size: 364px 674px
     .section__right
       +flex-size(67.9%)
+      +md
+        padding-left: 45px 
+        +flex-size(66%)
+        min-height: 748px
   &_contacts
     color: $white
     .section__title
@@ -70,19 +76,24 @@
         padding-left: 30px
       +md
         padding-left: 68px 
+      +sm
+        padding-left: 54px 
     .section__left
       +md
         padding-right: 37px
         padding-bottom: 53px
         +flex-size(377px)
       +sm
+        padding-right: 0
         +flex-size(100%)
     .section__right
       background-color: $darkBlue
       padding-left: 0
       +vertical
       +sm
+        margin-left: -54px 
         order: initial
+        min-height: 100vh
     .section__outer
       +md
         padding-left: 0
@@ -222,6 +233,8 @@
       margin-top: 140px
     +lm
       margin-top: 50px 
+    +md
+      margin-top: 136px 
   .section__text
     margin-bottom: 39px
     +md 
@@ -257,6 +270,8 @@
     margin-top: 77px
     +xl
       margin-top: 30px
+    +md
+      margin-top: 60px
   &__adress
     margin-bottom: 60px
     +xxl
@@ -280,6 +295,9 @@
     +md
       margin-top: 98px
       margin-bottom: 57px 
+    +sm
+      margin-top: 74px
+      margin-bottom: 46px  
   &__connections
     margin-top: 50px
     +xxl
@@ -288,6 +306,8 @@
       margin-top: 30px
     +md
       margin-top: 48px 
+    +sm
+      margin-top: 57px 
     .connection
       &:not(:last-child)
         margin-bottom: 20px
@@ -295,6 +315,8 @@
           margin-bottom: 10px
         +md
           margin-bottom: 20px 
+        +sm
+          margin-bottom: 30px 
   &__map-wrap
     position: absolute
     top: 50%
