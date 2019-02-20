@@ -12,17 +12,18 @@
   text-transform: uppercase
   transition: color $tr, background-color $tr, border-color $tr
   +xxl
-    padding: 22px 10px
+    padding: 22px 10px 23px
     min-width: 230px
-  +xxl
-    padding: 15px 20px
+  +xl
+    padding: 16px 20px 17px
     min-width: 210px
   +lg
     min-width: 190px
-  +lm
-    padding: 10px 15px
-    min-width: 0
-    font-size: 13px
+  .header &
+    +lm
+      padding: 10px 15px 
+      min-width: 0
+      font-size: 13px
   &_blue
     border: 1px solid $blue
     +hover
@@ -126,7 +127,8 @@
 .circle-btn
   background-color: transparent
   font-size: 0
-  // cursor: default
+  vertical-align: top
+  display: inline-block
   &.is-animate
     .normal-circle,
     .circle-btn__circle
@@ -169,6 +171,7 @@
     height: 50px
     cursor: pointer
     position: relative
+    font-size: 0
   &__circle
     stroke: $white
     stroke-width: 2px
