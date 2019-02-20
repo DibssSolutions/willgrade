@@ -4,24 +4,30 @@
     height: 100%
     padding-top: 200px
     padding-bottom: 50px
+    +xxl
+      min-height: 100vh
+      padding-top: 125px
+      padding-bottom: 30px
   &__content
     // width: 50%
-    width: 854px
+    width: 100%
+    max-width: 854px
   &__logo
     display: block
     margin-bottom: 100px
+    +xxl
+      margin-bottom: 50px 
   &__title
     color: $textBlack
     margin-right: -10px
     margin-bottom: 43px
   &__descr
-    // max-width: 590px
     margin-bottom: 87px
-    // font-size: 21px
-    
     line-height: 1.555
     letter-spacing: -0.1px
     color: $textLight
+    +xxl
+      margin-bottom: 70px 
   &__actions
     display: flex
     align-items: center

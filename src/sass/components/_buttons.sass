@@ -11,6 +11,9 @@
   background: none
   text-transform: uppercase
   transition: color $tr, background-color $tr, border-color $tr
+  +xxl
+    padding: 22px 10px
+    min-width: 230px
   &_blue
     border: 1px solid $blue
     +hover
@@ -48,8 +51,8 @@
     svg
       +coverdiv
       z-index: 2
-      height: 80px
-      width: 280px
+      height: 100%
+      width: 100%
       fill: none
       stroke-dasharray: 1432
       stroke-dashoffset: 1432

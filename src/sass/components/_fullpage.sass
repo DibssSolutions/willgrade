@@ -18,6 +18,8 @@
   &_investment
     .section__inner
       background-position: -4px 100%
+    .section__left
+      +flex-size(32.1%)
   &_career
     pointer-events: auto
     min-height: inherit
@@ -32,6 +34,8 @@
     .section__inner
       background-position: 47px 180px
       background-size: 422px 780px
+    .section__left
+      +flex-size(32.1%)
   &_contacts
     color: $white
     .section__title
@@ -62,9 +66,7 @@
       padding-left: 77px
       background-color: $textLight
     .section__left
-      +flex-size(44.5%)
-    .section__right
-      +flex-size(55.5%)
+      +flex-size(764px)
   &_investment
     position: relative
     min-height: inherit
@@ -82,7 +84,7 @@
     display: flex
     flex-wrap: wrap
   &__left
-    +flex-size(27.5%)
+    +flex-size(472px)
     padding: 0 88px 0 0
     &_border
       position: relative
@@ -98,8 +100,8 @@
       &:after
         background-color: $text
   &__right
-    +flex-size(72.5%)
     padding-left: 156px
+    flex-grow: 1
     position: relative
     .section_contacts &
       overflow: hidden
