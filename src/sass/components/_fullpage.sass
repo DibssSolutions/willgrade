@@ -16,15 +16,15 @@
       background-color: $darkBg
     .section__left
       background-repeat: no-repeat
-    +sm
-      .section__outer
-        padding-top: 37px
   &_investment
     .section__left
       +flex-size(32.1%)
       background-position: -2px -3%
     .section__right
       +flex-size(67.9%)
+    +sm
+      .section__outer
+        padding-top: 37px
   &_career
     pointer-events: auto
     min-height: inherit
@@ -39,6 +39,8 @@
       z-index: 3
     .section__outer
       padding-top: 0
+      +sm 
+        padding-top: 37px
     .section__left
       background-position: 47px 180px
       background-size: 422px 780px
@@ -130,6 +132,10 @@
     +md
       +flex-size(391px)
       padding-right: 66px
+    +sm
+      +flex-size(100%)
+      min-height: 225px
+      padding-right: 0
     &_border
       position: relative
       &:after
@@ -152,8 +158,11 @@
       padding-left: 100px
       background-position: center
       background-size: cover
-    +md
-      
+    +sm
+      +flex-size(100%)
+      order: -1
+      min-height: 225px
+      padding-left: 0
     .section_contacts &
       overflow: hidden
   &__splitter-horiz

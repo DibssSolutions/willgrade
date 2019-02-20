@@ -17,7 +17,6 @@
       font-size: 16px
     +lm
       font-size: 14px
-      
   &.is-transparent
     background-color: transparent
     .header__logo
@@ -73,9 +72,7 @@
       top: 0
       left: 0
       min-height: 100vh
-      display: flex
-      align-items: center
-      padding: 40px 60px 40px 40px
+      padding: 100px 60px 40px 40px
       transform: translateX(-101%)
       background-color: $white
       transition: transform $tr
@@ -102,6 +99,7 @@
     transition: color .3s
     +lm
       font-size: 18px
+      font-weight: 700
     .is-transparent &
       +hover
         color: $white 
@@ -116,6 +114,8 @@
     font-size: 20px
   +lm
     font-size: 16px 
+  +md
+    font-size: 24px
 
 .logo
   display: inline-block
