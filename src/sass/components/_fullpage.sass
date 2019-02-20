@@ -56,6 +56,7 @@
       min-height: calc(100vh - 121px)
       margin-top: 0
     +sm
+      margin-bottom: 77px 
       min-height: inherit
     +hover
       z-index: 3
@@ -71,6 +72,9 @@
         +flex-size(33%)
         background-position: -11px 191px
         background-size: 364px 674px
+      +sm
+        background-size: 163px 296px
+        background-position: 23% 7px
     .section__right
       +flex-size(67.9%)
       +md
@@ -78,7 +82,9 @@
         +flex-size(66%)
         min-height: 748px
       +sm
-        padding-left: 0
+        padding-left: 0 
+        min-height: 0
+        
   &_contacts
     color: $white
     .section__title
