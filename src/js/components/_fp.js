@@ -43,7 +43,6 @@ $(document).ready(function() {
       css3: true,
       onLeave: function(origin, destination, direction) {
         var leavingSection = this;
-        console.log(origin, destination, direction);
         var header = $(".js-header");
         var headerBtn = $(".js-header-btn");
         if (origin == 1 && direction == "down") {

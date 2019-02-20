@@ -8,7 +8,7 @@
   background-color: $white
   transition: background-color 0.5s
   +md
-    padding: 30px 0 10px
+    padding: 20px 0
   +sm 
     padding: 11px 0
   .outer
@@ -69,8 +69,6 @@
       left: 30px
     +md
       left: 20px
-      top: calc(50% + 10px)
-      transform: translateY(-50%)
     +sm 
       left: 10px
       top: 50%
@@ -84,8 +82,9 @@
       padding: 147px 130px 40px 66px
       transform: translateX(-101%)
       background-color: $textLight
-      transition: transform $tr
-      box-shadow: 0px 2px 30.1px 1.9px rgba(39, 47, 56, 0.46)
+      transition: transform $tr, box-shadow $tr
+      .is-open &
+        box-shadow: 0px 2px 30.1px 1.9px rgba(39, 47, 56, 0.46)
     +sm 
       padding: 120px 60px 40px 46px
     .is-open &
@@ -125,7 +124,7 @@
     .is-transparent &
       +hover
         color: $white 
-        +sm 
+        +lm
           color: $blue
     +hover
       color: $blue

@@ -37,15 +37,29 @@
       z-index: 3
     +sm
       z-index: 1
-      .section__outer
+    .section__outer
+      +sm
         padding-top: 0
     .section__title-md
       max-width: 700px
     .section__left
       +flex-size(32.1%)
       background-position: -2px -3%
+      +md
+        margin-left: -45px
+        +flex-size(39%)
+      +sm
+        margin-left: -39px 
     .section__right
       +flex-size(67.9%)
+      +md
+        padding-left: 45px
+        padding-right: 45px
+        min-height: 867px
+        +flex-size(61%)
+      +sm
+        padding-left: 0
+        min-height: auto
   &_career
     pointer-events: auto
     min-height: calc(100vh - 135px)
@@ -62,6 +76,8 @@
       z-index: 3
     .section__outer
       padding-top: 0
+      +md
+        padding-top: 60px
       +sm 
         padding-top: 37px
     .section__left
@@ -117,9 +133,11 @@
         min-height: 100vh
     .section__outer
       +md
+        padding-top: 120px
         padding-left: 0
         padding-right: 0
       +sm
+        padding-top: 0
         display: block
   &_development
     height: auto
@@ -138,11 +156,14 @@
       margin-top: 0
       min-height: inherit
       .section__outer
-        padding-top: 37px
     +hover
       z-index: 3
     .section__outer
       padding-top: 0
+      +md
+        padding-top: 60px
+      +md
+        padding-top: 37px
     .section__inner
       padding-left: 77px
       background-color: $textLight
@@ -152,6 +173,9 @@
       +flex-size(764px)
       +lm
         +flex-size(50%)
+      +md
+        padding-bottom: 130px 
+        +flex-size(460px)
       +sm
         padding-right: 45px
         padding-bottom: 80px 
@@ -159,7 +183,8 @@
     .section__right
       +lm
         +flex-size(50%)
-
+      +md
+        +flex-size(calc(100% - 460px))
       +sm
         margin-left: -30px
         margin-right: 30px
@@ -209,6 +234,7 @@
   &__outer
     padding-top: 135px
     +xl
+      padding-top: 120px
     +md
       padding-top: 120px
     +sm
