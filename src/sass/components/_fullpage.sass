@@ -68,10 +68,27 @@
       background-color: $blue
       +xxl
         padding-left: 30px
+      +md
+        padding-left: 68px 
+    .section__left
+      +md
+        padding-right: 37px
+        padding-bottom: 53px
+        +flex-size(377px)
+      +sm
+        +flex-size(100%)
     .section__right
       background-color: $darkBlue
       padding-left: 0
       +vertical
+      +sm
+        order: initial
+    .section__outer
+      +md
+        padding-left: 0
+        padding-right: 0
+      +sm
+        display: block
   &_development
     height: auto
     position: absolute
@@ -224,27 +241,38 @@
       margin-bottom: 35px
     +xl
       margin-bottom: 30px
+    +md
+      margin-bottom: 60px 
     .adress:not(:last-child)
       margin-bottom: 19px
       +xl
         margin-bottom: 16px
+      +md
+        margin-bottom: 26px 
   &__contacts-title
     margin-top: 60px
     margin-bottom: 42px
     +xl
       margin-top: 30px
       margin-bottom: 20px
+    +md
+      margin-top: 98px
+      margin-bottom: 57px 
   &__connections
     margin-top: 50px
     +xxl
       margin-top: 35px
     +xl
       margin-top: 30px
+    +md
+      margin-top: 48px 
     .connection
       &:not(:last-child)
         margin-bottom: 20px
         +xl
           margin-bottom: 10px
+        +md
+          margin-bottom: 20px 
   &__map-wrap
     position: absolute
     top: 50%
@@ -252,6 +280,8 @@
     width: 1209px
     height: 776px
     margin: -348px 0 0 -652px
+    +md
+      margin: -383px 0 0 -652px
   &__map
     max-width: 100%
     display: inline-block
