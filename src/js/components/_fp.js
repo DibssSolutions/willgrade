@@ -19,7 +19,6 @@ $(document).ready(function() {
     sectionSelector: ".js-section",
     scrollOverflow: true,
     responsive: 768,
-    resize: false,
     fixedElements: ".js-header",
     menu: "#myMenu",
     css3: true,

@@ -14,12 +14,12 @@
   &_career
     .section__inner
       background-color: $darkBg
+    .section__left
       background-repeat: no-repeat
   &_investment
-    .section__inner
-      background-position: -4px 100%
     .section__left
       +flex-size(32.1%)
+      background-position: -2px -3%
   &_career
     pointer-events: auto
     min-height: inherit
@@ -27,13 +27,16 @@
     position: relative
     z-index: 2
     margin-top: 92px
+    +md
+      min-height: calc(100vh - 121px)
     +hover
       z-index: 3
     .section__outer
       padding-top: 0
-    .section__inner
+    .section__left
       background-position: 47px 180px
       background-size: 422px 780px
+      +xxl
     .section__left
       +flex-size(32.1%)
   &_contacts
@@ -44,6 +47,8 @@
     .section__inner
       padding-left: 77px
       background-color: $blue
+      +xxl
+        padding-left: 30px
     .section__right
       background-color: $darkBlue
       padding-left: 0
@@ -58,6 +63,8 @@
     width: 100%
     min-height: inherit
     min-height: calc(100vh - 135px)
+    +xl
+      min-height: calc(100vh - 121px)
     +hover
       z-index: 3
     .section__outer
@@ -77,10 +84,14 @@
       max-width: 700px
   &__outer
     padding-top: 135px
+    +xl
+      padding-top: 120px
   &__inner
     min-height: calc(100vh - 135px)
     display: flex
     flex-wrap: wrap
+    +xl
+      min-height: calc(100vh - 121px)
   &__left
     +flex-size(472px)
     padding: 0 88px 0 0
@@ -103,6 +114,11 @@
     padding-left: 156px
     flex-grow: 1
     position: relative
+    background-repeat: no-repeat
+    +xxl
+      padding-left: 100px
+      background-position: center
+      background-size: cover
     .section_contacts &
       overflow: hidden
   &__splitter-horiz
@@ -147,6 +163,8 @@
     margin-top: 77px
   &__adress
     margin-bottom: 60px
+    +xxl
+      margin-bottom: 35px
     .adress:not(:last-child)
       margin-bottom: 19px
   &__contacts-title
@@ -154,6 +172,8 @@
     margin-bottom: 42px
   &__connections
     margin-top: 50px
+    +xxl
+      margin-top: 35px
     .connection
       &:not(:last-child)
         margin-bottom: 20px
