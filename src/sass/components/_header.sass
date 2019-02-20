@@ -37,19 +37,38 @@
     color: $blue
   &__burger
     display: none
+    position: relative
+    z-index: 10
     +md
       display: block
-  &__nav
-    +md 
-      position: absolute
 
-  
+  &__nav
+    +md
+      position: absolute
+      z-index: 2
+      top: 0
+      left: 0
+      min-height: 100vh
+      display: flex
+      align-items: center
+      padding: 40px 40px 40px 20px
+      transform: translateX(-101%)
+      background-color: $white
+      transition: transform $tr
+      .is-open &
+        transform: translateX(0)
+
 .nav
   &__list
     display: flex
     flex-wrap: wrap
+    +md
+      flex-direction: column
+      min-height: 100%
   &__item
     padding: 0 19px
+    +md
+      padding: 10px 0
   &__link
     color: $textBlack
     transition: color .3s
@@ -91,7 +110,7 @@
     opacity: 1
     left: 0
     transform: rotate(0deg)
-    transition: .25s ease-in-out
+    transition: background-color .25s ease-in-out
     &:nth-child(1) 
       top: 0px
     &:nth-child(2),
@@ -99,8 +118,9 @@
       top: 10px
     &:nth-child(4) 
       top: 20px
-  &.is-open 
+  .is-open &
     span
+      background-color: $blue
       &:nth-child(1) 
         top: 18px
         width: 0%

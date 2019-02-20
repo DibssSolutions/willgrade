@@ -43,6 +43,8 @@
     color: $text
   &__inner
     display: flex
+    +sm
+      flex-direction: column
   &__bg
     +flex-size(298px)
     padding: 0 40px 0 15px
@@ -57,6 +59,9 @@
     font-size: 21px
     padding: 50px 84px 35px 0
     flex-grow: 1
+    +md
+      padding: 20px
+      order: -1
   &__title
     margin-bottom: 30px
     margin-left: -4px
