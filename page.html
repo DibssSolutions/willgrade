@@ -17,20 +17,20 @@
       <header class="header is-transparent js-header" id="myMenu">
         <div class="header__outer outer">
           <div class="header__inner inner">
+            <div class="header__burger">
+              <div class="burger js-mob-toggler">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
             <div class="header__logo">
               <a href="#hero" data-menuanchor="hero" class="logo">
                 <img src="img/logo-dark.png" alt="logo">
               </a>
             </div>
             <div class="header__nav">
-              <div class="header__burger">
-                <div class="burger js-mob-toggler">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </div>
-              </div>
               <nav class="nav">
                 <ul class="nav__list">
                   <li class="nav__item" data-menuanchor="selling"><a href="#selling" class="nav__link">Продажа квартир</a></li>
@@ -45,7 +45,18 @@
               <div class="header__tel">
                 <a href="tel:+74953322211" class="phone">+7 (495) 33 222 11</a>
               </div>
-              <a href="#" class="btn btn_solid js-header-btn" data-modal-control="contacts-modal"><span class="btn__text">Оставить заявку</span></a>
+              <div class="md-hide">
+                <a href="#" class="btn btn_solid js-header-btn" data-modal-control="contacts-modal"><span class="btn__text">Оставить заявку</span></a>
+              </div>
+              <div class="md-show">
+                <a href="#" class="message-btn js-header-btn" data-modal-control="contacts-modal">
+                  <span class="message-btn__icon">
+                    <svg class="icon icon-message">
+                      <use xlink:href="img/sprite.svg#icon-message"></use>
+                    </svg>
+                  </span>
+                </a>
+              </div>
             </div>
           </div>
         </div>
