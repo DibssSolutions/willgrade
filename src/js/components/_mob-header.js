@@ -7,8 +7,8 @@ WIN.on('scroll', function() {
   let winHeight = WIN.height();
 
   top - winHeight >= 1
-    ? header.addClass('is-fixed')
-    : header.removeClass('is-fixed');
+    ? header.addClass('is-transparent')
+    : header.removeClass('is-transparent');
 });
 
 $('.js-mob-toggler').on('click', () => {

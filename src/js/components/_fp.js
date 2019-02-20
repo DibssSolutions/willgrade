@@ -18,7 +18,7 @@ $(document).ready(function() {
     var slides = $(".js-section");
 
     new IScroll("section");
-
+    $(".js-fullpage").addClass("is-inited");
     $(".js-fullpage").fullpage({
       responsiveWidth: 10,
       responsiveHeight: 10,
