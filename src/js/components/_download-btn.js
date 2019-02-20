@@ -39,7 +39,5 @@ import { TweenLite } from 'gsap';
       ease: Power2.easeOut
     });
   }
-
-
 }
 

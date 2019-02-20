@@ -122,7 +122,7 @@
     &:nth-child(4)
       left: 0
       transform: translateY(101%)
-    
+
 .circle-btn
   background-color: transparent
   font-size: 0
@@ -153,19 +153,6 @@
       fill: $white
     .circle-btn__sprite-icon
       color: $blue
-  &_download
-    // +vcenter
-    // position: absolute
-
-    // .circle-btn__icon:after
-    //   content: ''
-    //   position: absolute
-    //   top: -50px
-    //   left: -50px
-    //   width: 150px
-    //   bottom: -50px
-    //   border-radius: 50%
-    //   z-index: 1
   &_grey
     .circle-btn__circle
       stroke: #b6b6b6
@@ -236,6 +223,21 @@
       min-width: 200px
     &_hidden
       +fadeout(0.6s)
+      +md
+        +fadein
+
+.message-btn
+  display: inline-block
+  height: 80px
+  width: 80px
+  background-color: $textLight
+  position: relative
+  &__icon
+    +vcenter
+    font-size: 0
+    .icon
+      color: $blue
+      font-size: 31px
 
 @keyframes drawBtn
   to 
