@@ -12,17 +12,18 @@
   text-transform: uppercase
   transition: color $tr, background-color $tr, border-color $tr
   +xxl
-    padding: 22px 10px
+    padding: 22px 10px 23px
     min-width: 230px
-  +xxl
-    padding: 15px 20px
+  +xl
+    padding: 16px 20px 17px
     min-width: 210px
   +lg
     min-width: 190px
-  +lm
-    padding: 10px 15px
-    min-width: 0
-    font-size: 13px
+  .header &
+    +lm
+      padding: 10px 15px 
+      min-width: 0
+      font-size: 13px
   &_blue
     border: 1px solid $blue
     +hover
@@ -58,6 +59,8 @@
     overflow: hidden
     .btn__text
       opacity: 0
+      +md
+        opacity: 1
     // svg
     //   +coverdiv
     //   z-index: 2
@@ -108,9 +111,13 @@
     &:nth-child(1)
       top: 0
       transform: translateX(-101%)
+      +md
+        transform: none
     &:nth-child(3)
       bottom: 0
       transform: translateX(101%)
+      +md
+        transform: none
     &:nth-child(2),
     &:nth-child(4)
       top: 0
@@ -119,14 +126,19 @@
     &:nth-child(2)
       right: 0
       transform: translateY(-101%)
+      +md
+        transform: none
     &:nth-child(4)
       left: 0
       transform: translateY(101%)
+      +md
+        transform: none
 
 .circle-btn
   background-color: transparent
   font-size: 0
-  display: block
+  vertical-align: top
+  display: inline-block
   &.is-animate
     .normal-circle,
     .circle-btn__circle
@@ -185,6 +197,7 @@
     height: 50px
     cursor: pointer
     position: relative
+    font-size: 0
   &__circle
     stroke: $white
     stroke-width: 2px
@@ -246,8 +259,13 @@
   display: inline-block
   height: 80px
   width: 80px
-  background-color: $textLight
+  background: transparent
   position: relative
+  transition: background-color $tr
+  border: 1px solid $blue
+  .is-transparent &
+    background-color: $textLight
+    border: 1px solid $textLight
   &__icon
     +vcenter
     font-size: 0
