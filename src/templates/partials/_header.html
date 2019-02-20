@@ -18,10 +18,9 @@
         <nav class="nav">
           <ul class="nav__list">
             {% for item in [
-              { title: 'Продажа квартир', link: 'selling' },
+              { title: 'Продажа квартир в Москве', link: 'selling' },
+              { title: 'Продажа квартир в Европе', link: 'selling-euro' },
               { title: 'Инвестиции', link: 'investment' },
-              { title: 'Девелопмент', link: 'investment' },
-              { title: 'Карьера', link: 'investment' },
               { title: 'Контакты', link: 'contacts' }
             ] %}
               <li class="nav__item" data-menuanchor="{{ item.link }}"><a href="#{{ item.link }}" class="nav__link">{{ item.title }}</a></li>
