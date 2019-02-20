@@ -16,6 +16,19 @@
       background-color: $darkBg
     .section__left
       background-repeat: no-repeat
+  &_investment,
+  &_career,
+  &_development
+    .section__inner
+      +sm
+        flex-direction: column
+    .section__right,
+    .section__left
+      +sm
+        +flex-size(100%)
+    .section__right
+      +sm
+        padding-right: 30px 
   &_investment
     position: relative
     min-height: inherit
@@ -64,6 +77,8 @@
         padding-left: 45px 
         +flex-size(66%)
         min-height: 748px
+      +sm
+        padding-left: 0
   &_contacts
     color: $white
     .section__title
@@ -235,6 +250,9 @@
       margin-top: 50px 
     +md
       margin-top: 136px 
+    +sm
+      margin-top: 100px
+      margin-bottom: 50px 
   .section__text
     margin-bottom: 39px
     +md 
@@ -255,6 +273,10 @@
     +xl
       margin-top: -25px
       margin-bottom: -25px
+    +sm
+      margin-top: -30px
+      margin-bottom: -30px
+      text-align: center
   &__download-btn-area
     position: relative
     display: block
@@ -272,6 +294,10 @@
       margin-top: 30px
     +md
       margin-top: 60px
+    +sm
+      margin-left: -31px
+      margin-right: -31px
+      text-align: center
   &__adress
     margin-bottom: 60px
     +xxl
