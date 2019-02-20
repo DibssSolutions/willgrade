@@ -70,18 +70,22 @@
         padding-left: 30px
       +md
         padding-left: 68px 
+      +sm
+        padding-left: 54px 
     .section__left
       +md
         padding-right: 37px
         padding-bottom: 53px
         +flex-size(377px)
       +sm
+        padding-right: 0
         +flex-size(100%)
     .section__right
       background-color: $darkBlue
       padding-left: 0
       +vertical
       +sm
+        margin-left: -54px 
         order: initial
         min-height: 100vh
     .section__outer
@@ -259,6 +263,9 @@
     +md
       margin-top: 98px
       margin-bottom: 57px 
+    +sm
+      margin-top: 74px
+      margin-bottom: 46px  
   &__connections
     margin-top: 50px
     +xxl
@@ -267,6 +274,8 @@
       margin-top: 30px
     +md
       margin-top: 48px 
+    +sm
+      margin-top: 57px 
     .connection
       &:not(:last-child)
         margin-bottom: 20px
@@ -274,6 +283,8 @@
           margin-bottom: 10px
         +md
           margin-bottom: 20px 
+        +sm
+          margin-bottom: 30px 
   &__map-wrap
     position: absolute
     top: 50%
