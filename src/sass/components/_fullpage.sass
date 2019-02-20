@@ -124,13 +124,24 @@
   &_selling
     .section__title-lg
       margin-top: 26px
+      +md 
+        margin-bottom: 56px
+      +sm
+        margin-top: 53px
+        margin-bottom: 63px
     .section__left
       +cover
+      +md 
+        padding-bottom: 80px
+      +sm 
+        padding-bottom: 0
     .section__text
       margin-top: 40px
       margin-bottom: 27px
       +xl
         margin-top: 30px
+      +sm 
+        margin-top: 42px
     +sm
       .section__outer
         padding-bottom: 100px
@@ -147,6 +158,8 @@
     flex-wrap: wrap
     +xl
       min-height: calc(100vh - 121px)
+    +md 
+      min-height: inherit
     +sm 
       flex-direction: column
   &__left
@@ -171,6 +184,8 @@
         bottom: 37px
         width: 1px
         background-color: $textLight
+        +sm 
+          display: none
     &_border-dark
       &:after
         background-color: $text
@@ -209,10 +224,17 @@
       margin-top: 50px 
   .section__text
     margin-bottom: 39px
+    +md 
+      margin-top: 40px
+      padding-right: 5px
+      margin-bottom: 54px
     p:not(:last-child)
       margin-bottom: 28px
       +xl
         margin-bottom: 15px
+      +md
+        margin-bottom: 26px
+
   .fp-tableCell
     vertical-align: top
   &__download-btn-wrapper
