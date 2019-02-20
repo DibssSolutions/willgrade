@@ -45,11 +45,11 @@
     display: none
     position: relative
     z-index: 10
-    +md
+    +lm
       display: block
 
   &__nav
-    +md
+    +lm
       position: absolute
       z-index: 2
       top: 0
@@ -68,7 +68,7 @@
   &__list
     display: flex
     flex-wrap: wrap
-    +md
+    +lm
       flex-direction: column
       min-height: 100%
   &__item
@@ -78,9 +78,7 @@
     +lg
       padding: 0 10px
     +lm
-      padding: 0 7px
-    +md
-      padding: 10px 0
+      padding: 20px 0
   &__link
     color: $textBlack
     transition: color .3s

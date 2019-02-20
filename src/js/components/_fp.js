@@ -3,16 +3,11 @@ import { ANIMATE } from '../constants';
 import IScroll from "iscroll";
 window.IScroll = IScroll;
 var fullpage = require("../lib/jquery.fullpage.min.js");
-// import { init, fpAnimation, fpReset } from './_animation-fullpage';
-
-// var fp = document.getElementById('fullpage');
 
 $(document).ready(function() {
   $(window).resize(function() {
     if ($(window).width() < 1023) {
-      //if ($.fn.fullPage) {
       $.fn.fullpage.destroy("all");
-      //}
     }
     if ($(window).width() > 1023) {
       initFullpage();
@@ -34,10 +29,6 @@ $(document).ready(function() {
       fixedElements: ".js-header",
       menu: "#myMenu",
       css3: true,
-      // navigation: true,
-      // fitToSection: false,
-      // paddingTop: 135,
-
       onLeave: function(origin, destination, direction) {
         var leavingSection = this;
         console.log(origin, destination, direction);
@@ -59,7 +50,6 @@ $(document).ready(function() {
         buttons.each((index, el) => $(el).addClass(ANIMATE));
       }
     });
-
     const wrap = $(".js-sections-wrapper");
     const sectionDev = $(".js-section-development");
     const sectionInv = $(".js-section-investment");
@@ -82,4 +72,3 @@ $(document).ready(function() {
     );
   }
 });
-
