@@ -11,3 +11,13 @@ trigger.hover(function() {
 }, function() {
   markers.removeClass(ACTIVE);
 });
+
+markers.hover(function() {
+  const id = $(this).data('adress-marker');
+  const activeTrigger = $(`[data-adress-trigger="${id}"]`);
+  trigger.removeClass(ACTIVE);
+  activeTrigger.addClass(ACTIVE);
+}, function() {
+  trigger.removeClass(ACTIVE);
+});
+

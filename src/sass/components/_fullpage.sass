@@ -14,12 +14,12 @@
   &_career
     .section__inner
       background-color: $darkBg
+    .section__left
       background-repeat: no-repeat
   &_investment
-    .section__inner
-      background-position: -4px 100%
     .section__left
       +flex-size(32.1%)
+      background-position: -2px -3%
   &_career
     pointer-events: auto
     min-height: inherit
@@ -27,13 +27,16 @@
     position: relative
     z-index: 2
     margin-top: 92px
+    +md
+      min-height: calc(100vh - 121px)
     +hover
       z-index: 3
     .section__outer
       padding-top: 0
-    .section__inner
+    .section__left
       background-position: 47px 180px
       background-size: 422px 780px
+      +xxl
     .section__left
       +flex-size(32.1%)
   &_contacts
@@ -44,6 +47,8 @@
     .section__inner
       padding-left: 77px
       background-color: $blue
+      +xxl
+        padding-left: 30px
     .section__right
       background-color: $darkBlue
       padding-left: 0
@@ -58,6 +63,8 @@
     width: 100%
     min-height: inherit
     min-height: calc(100vh - 135px)
+    +xl
+      min-height: calc(100vh - 121px)
     +hover
       z-index: 3
     .section__outer
@@ -77,10 +84,14 @@
       max-width: 700px
   &__outer
     padding-top: 135px
+    +xl
+      padding-top: 120px
   &__inner
     min-height: calc(100vh - 135px)
     display: flex
     flex-wrap: wrap
+    +xl
+      min-height: calc(100vh - 121px)
   &__left
     +flex-size(472px)
     padding: 0 88px 0 0
@@ -103,6 +114,11 @@
     padding-left: 156px
     flex-grow: 1
     position: relative
+    background-repeat: no-repeat
+    +xxl
+      padding-left: 100px
+      background-position: center
+      background-size: cover
     .section_contacts &
       overflow: hidden
   &__splitter-horiz
@@ -113,13 +129,19 @@
       background-color: $textLight
   &__title-lg
     margin-bottom: 55px
+    +xl
+      margin-bottom: 30px
   &__title-md
     margin-top: 200px
     margin-bottom: 43px
+    +xl
+      margin-top: 140px
   .section__text
     margin-bottom: 39px
     p:not(:last-child)
       margin-bottom: 28px
+      +xl
+        margin-bottom: 15px
   .fp-tableCell
     vertical-align: top
   &_selling
@@ -130,8 +152,13 @@
     .section__text
       margin-top: 40px
       margin-bottom: 27px
+      +xl
+        margin-top: 30px
   &__download-btn-wrapper
     margin-left: -25px
+    +xl
+      margin-top: -25px
+      margin-bottom: -25px
   &__download-btn-area
     position: relative
     display: block
@@ -145,25 +172,42 @@
       z-index: 3
   &__hr-btn
     margin-top: 77px
+    +xl
+      margin-top: 30px
   &__adress
     margin-bottom: 60px
+    +xxl
+      margin-bottom: 35px
+    +xl
+      margin-bottom: 30px
     .adress:not(:last-child)
       margin-bottom: 19px
+      +xl
+        margin-bottom: 16px
   &__contacts-title
     margin-top: 60px
     margin-bottom: 42px
+    +xl
+      margin-top: 30px
+      margin-bottom: 20px
   &__connections
     margin-top: 50px
+    +xxl
+      margin-top: 35px
+    +xl
+      margin-top: 30px
     .connection
       &:not(:last-child)
         margin-bottom: 20px
+        +xl
+          margin-bottom: 10px
   &__map-wrap
     position: absolute
     top: 50%
     left: 50%
     width: 1209px
     height: 776px
-    margin: -387px 0 0 -691px
+    margin: -348px 0 0 -652px
   &__map
     max-width: 100%
     display: inline-block
