@@ -45,11 +45,11 @@
     display: none
     position: relative
     z-index: 10
-    +md
+    +lm
       display: block
 
   &__nav
-    +md
+    +lm
       position: absolute
       z-index: 2
       top: 0
@@ -68,7 +68,7 @@
   &__list
     display: flex
     flex-wrap: wrap
-    +md
+    +lm
       flex-direction: column
       min-height: 100%
   &__item
@@ -78,9 +78,7 @@
     +lg
       padding: 0 10px
     +lm
-      padding: 0 7px
-    +md
-      padding: 10px 0
+      padding: 20px 0
   &__link
     color: $textBlack
     transition: color .3s
@@ -113,7 +111,6 @@
   width: 27px
   height: 22px
   position: relative
-  margin: 50px auto
   transform: rotate(0deg)
   transition: .5s ease-in-out
   cursor: pointer
@@ -122,11 +119,13 @@
     position: absolute
     height: 2px
     width: 100%
-    background: $textLight
     opacity: 1
     left: 0
+    background-color: $blue
     transform: rotate(0deg)
     transition: background-color .25s ease-in-out
+    .is-transparent &
+      background: $textLight
     &:nth-child(1) 
       top: 0px
     &:nth-child(2),
