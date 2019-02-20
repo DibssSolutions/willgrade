@@ -126,8 +126,17 @@
 .circle-btn
   background-color: transparent
   font-size: 0
-  // cursor: default
+  display: block
   &.is-animate
+    .normal-circle,
+    .circle-btn__circle
+      animation: drawBtn 0.5s forwards ease-in
+    .normal-image,
+    .circle-btn__sprite-icon
+      animation: fadeIn 0.3s 0.4s forwards ease-out
+    .circle-btn__text_animated
+      animation: fadeIn 0.3s 0.4s forwards ease-out
+  +md
     .normal-circle,
     .circle-btn__circle
       animation: drawBtn 0.5s forwards ease-in
@@ -162,6 +171,13 @@
         stroke: $blue
     .circle-btn__sprite-icon
       color: #b6b6b6
+  &_play
+    +sm
+      text-align: center
+      .circle-btn__text
+        display: block
+        position: static
+        margin-left: 0
   &__icon
     display: inline-block
     vertical-align: middle
