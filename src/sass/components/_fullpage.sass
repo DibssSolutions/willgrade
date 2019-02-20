@@ -20,6 +20,8 @@
     .section__left
       +flex-size(32.1%)
       background-position: -2px -3%
+    .section__right
+      +flex-size(67.9%)
   &_career
     pointer-events: auto
     min-height: inherit
@@ -39,6 +41,8 @@
       +xxl
     .section__left
       +flex-size(32.1%)
+    .section__right
+      +flex-size(67.9%)
   &_contacts
     color: $white
     .section__title
@@ -74,6 +78,11 @@
       background-color: $textLight
     .section__left
       +flex-size(764px)
+      +lm
+        +flex-size(50%)
+    .section__right
+      +lm
+        +flex-size(50%)
   &_investment
     position: relative
     min-height: inherit
