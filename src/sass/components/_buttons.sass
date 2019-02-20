@@ -24,7 +24,7 @@
     padding: 30px 10px 31px
   .header &
     +lm
-      padding: 10px 15px 
+      padding: 10px 15px
       min-width: 0
       font-size: 13px
   &_blue
@@ -64,14 +64,6 @@
       opacity: 0
       +md
         opacity: 1
-    // svg
-    //   +coverdiv
-    //   z-index: 2
-    //   height: 100%
-    //   width: 100%
-    //   fill: none
-    //   stroke-dasharray: 1432
-    //   stroke-dashoffset: 1432
     &.btn_blue
       border: none
       .btn__line
@@ -265,17 +257,41 @@
   width: 80px
   background: transparent
   position: relative
-  transition: background-color $tr
+  transition: background-color $tr, border-color $tr
   border: 1px solid $blue
+  +sm 
+    height: 55px
+    width: 55px
+  +hover
+    background-color: $blue
+    .message-btn__icon
+      .icon
+        color: $textLight
+    &:active
+      background-color: #0051c3
   .is-transparent &
     background-color: $textLight
     border: 1px solid $textLight
+    +hover
+      background-color: $white
+      border-color: $white
+      &:active
+        background-color: $grey
+        border-color: $grey
+      .message-btn__icon
+        .icon
+          color: $blue
   &__icon
     +vcenter
     font-size: 0
     .icon
       color: $blue
       font-size: 31px
+      transition: color $tr
+
+// .is-transparent
+//   .message-btn
+//     
 
 @keyframes drawBtn
   to 
