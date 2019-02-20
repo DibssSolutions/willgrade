@@ -5,10 +5,10 @@ WIN.on('scroll', function() {
 
   let top = DOC.scrollTop();
   let winHeight = WIN.height();
-
-  top - winHeight >= 1
-    ? header.addClass('is-fixed')
-    : header.removeClass('is-fixed');
+  console.log(top, winHeight);
+  top > winHeight
+    ? header.removeClass('is-transparent')
+    : header.addClass('is-transparent');
 });
 
 $('.js-mob-toggler').on('click', () => {

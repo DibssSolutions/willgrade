@@ -1,20 +1,30 @@
-import { ANIMATE } from '../constants';
+import { ANIMATE, INIT } from '../constants';
 /* eslint-disable */
 import IScroll from "iscroll";
 window.IScroll = IScroll;
 var fullpage = require("../lib/jquery.fullpage.min.js");
 
 $(document).ready(function() {
-  $(window).resize(function() {
+  if ($(window).width() > 1023) {
+    fp();
+  }
+
+  $(window).resize(() => fp());
+
+  function fp() {
     if ($(window).width() < 1023) {
       $.fn.fullpage.destroy("all");
+      $(".js-fullpage").removeClass(INIT);
     }
     if ($(window).width() > 1023) {
+      if ($(".js-fullpage").hasClass(INIT)) return;
       initFullpage();
     }
-  });
+  }
 
   function initFullpage() {
+    $(".js-fullpage").addClass(INIT);
+
     var slides = $(".js-section");
 
     new IScroll("section");
