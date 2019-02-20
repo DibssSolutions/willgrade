@@ -12,7 +12,7 @@
   +gpu
   overflow: auto
   transition: opacity 0.3s, visibility 0.3s, z-index 0.3s
-  background-color: #262b31
+  background-color: rgba(#262b31, 0.95)
   &.is-open
     opacity: 1
     visibility: visible
@@ -27,9 +27,14 @@
 [data-modal-close]
   position: absolute
   background-color: transparent
+  // background-color: $blue
   font-size: 0
+  right: 32px
+  top: 24px
   .icon
     font-size: 16px
+    color: #b4b4b4
+
 
 .modal
   &__container
@@ -50,27 +55,28 @@
   &__content
     text-align: left
     font-size: 21px
-    padding: 60px 84px 35px 0
+    padding: 50px 84px 35px 0
+    flex-grow: 1
   &__title
-    margin-bottom: 42px
+    margin-bottom: 30px
+    margin-left: -4px
+    line-height: 1
   &__name
     margin-bottom: 10px
+    line-height: 1
   &__position
     font-weight: 700
+    line-height: 1
+    margin-bottom: 27px
+  &__splitter
+    height: 1px
+    width: 100%
+    background-color: $text
   &__connections
+    margin-top: 36px
     .connection
       &:not(:last-child)
-        margin-bottom: 20px
-// 	padding: 20px
-// 	color: $black 
-// 	background-color: rgba($black, .2) 
-// 	.link
-// 		font-size: inherit
-// 	&__close
-// 		top: -20px
-// 		right: -20px
-// 		width: 40px
-// 		height: 40px
-// 		border-radius: 50% 
-// 		background-color: $white 
-// 		box-shadow: 0 3px 6px rgba(#000, .16) 
+        margin-bottom: 22px
+
+
+  
