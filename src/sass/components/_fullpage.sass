@@ -53,11 +53,15 @@
     .section__left
       background-position: 47px 180px
       background-size: 422px 780px
-      +xxl
-    .section__left
       +flex-size(32.1%)
+      +md
+        +flex-size(33%)
     .section__right
       +flex-size(67.9%)
+      +md
+        padding-left: 45px 
+        +flex-size(66%)
+        min-height: 748px
   &_contacts
     color: $white
     .section__title
@@ -212,8 +216,12 @@
       margin-top: 140px
     +lm
       margin-top: 50px 
+    +md
+      margin-top: 136px 
   .section__text
     margin-bottom: 39px
+    +md
+      margin-bottom: 45px 
     p:not(:last-child)
       margin-bottom: 28px
       +xl
