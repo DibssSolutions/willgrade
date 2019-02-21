@@ -1,4 +1,5 @@
-[data-modal]
+[data-modal],
+.reload-message
   position: fixed
   z-index: -1
   top: 0
@@ -12,13 +13,25 @@
   +gpu
   overflow: auto
   transition: opacity 0.3s, visibility 0.3s, z-index 0.3s
+
+[data-modal]
   background-color: rgba(#262b31, 0.95)
   &.is-open
     opacity: 1
     visibility: visible
     z-index: 100
 
-[data-modal-container]
+.reload-message
+  background-color: $white
+  .is-mob-state &
+    opacity: 1
+    visibility: visible
+    z-index: 100
+  &__message
+    padding: 30px
+
+[data-modal-container],
+.reload-message__container
   position: relative
   z-index: 1
   vertical-align: middle
@@ -34,7 +47,6 @@
   .icon
     font-size: 16px
     color: #b4b4b4
-
 
 .modal
   &__container
@@ -98,6 +110,5 @@
         margin-bottom: 22px
         +sm 
           margin-bottom: 16px
-
 
   
