@@ -62,8 +62,6 @@
     overflow: hidden
     .btn__text
       opacity: 0
-      +md
-        opacity: 1
     &.btn_blue
       border: none
       .btn__line
@@ -106,13 +104,9 @@
     &:nth-child(1)
       top: 0
       transform: translateX(-101%)
-      +md
-        transform: none
     &:nth-child(3)
       bottom: 0
       transform: translateX(101%)
-      +md
-        transform: none
     &:nth-child(2),
     &:nth-child(4)
       top: 0
@@ -121,13 +115,9 @@
     &:nth-child(2)
       right: 0
       transform: translateY(-101%)
-      +md
-        transform: none
     &:nth-child(4)
       left: 0
       transform: translateY(101%)
-      +md
-        transform: none
 
 .circle-btn
   background-color: transparent
@@ -143,15 +133,15 @@
       animation: fadeIn 0.3s 0.4s forwards ease-out
     .circle-btn__text_animated
       animation: fadeIn 0.3s 0.4s forwards ease-out
-  +md
-    .normal-circle,
-    .circle-btn__circle
-      animation: drawBtn 0.5s forwards ease-in
-    .normal-image,
-    .circle-btn__sprite-icon
-      animation: fadeIn 0.3s 0.4s forwards ease-out
-    .circle-btn__text_animated
-      animation: fadeIn 0.3s 0.4s forwards ease-out
+  // +md
+  //   .normal-circle,
+  //   .circle-btn__circle
+  //     animation: drawBtn 0.5s forwards ease-in
+  //   .normal-image,
+  //   .circle-btn__sprite-icon
+  //     animation: fadeIn 0.3s 0.4s forwards ease-out
+  //   .circle-btn__text_animated
+  //     animation: fadeIn 0.3s 0.4s forwards ease-out
   &:hover
     .normal
       +fadeout($tr)

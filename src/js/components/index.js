@@ -6,3 +6,4 @@ import './_modal';
 import { pathLength } from '../utils';
 import './_marker-hover';
 import './_mob-header';
+import './_scrollTrigger';

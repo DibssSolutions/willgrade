@@ -12,14 +12,12 @@ import { OPEN, ACTIVE, BODY, OVERFLOW_HIDDEN, ANIMATE } from '../constants';
 
     control.on('click', e => {
       e.preventDefault();
-      // BODY.addClass(OVERFLOW_HIDDEN);
       if (!control.hasClass(ACTIVE)) {
         modals.removeClass(OPEN);
         modal.addClass(OPEN);
         controls.removeClass(ACTIVE);
         control.addClass(ACTIVE);
         $(btns).each((index, el) => $(el).addClass(ANIMATE));
-        // $(btns).each((index, el) => console.log('WORK'));
       } else {
         modal.removeClass(OPEN);
         control.removeClass(ACTIVE);
@@ -34,7 +32,6 @@ import { OPEN, ACTIVE, BODY, OVERFLOW_HIDDEN, ANIMATE } from '../constants';
 
     const hide = () => {
       modal.removeClass(OPEN);
-      // BODY.removeClass(OVERFLOW_HIDDEN);
       controls.removeClass(ACTIVE);
     };
 

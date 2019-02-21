@@ -16,48 +16,50 @@
       background-color: $darkBg
     .section__left
       background-repeat: no-repeat
+  &_investment,
+  &_career,
+  &_development
+    .section__inner
+      +sm
+        flex-direction: column
+    .section__right,
+    .section__left
+      +sm
+        +flex-size(100%)
+    .section__right
+      +sm
+        padding-right: 30px 
   &_investment
     position: relative
     min-height: inherit
     z-index: 0
-    .section__inner
-      flex-wrap: nowrap
-      +md 
-        flex-wrap: wrap
     +hover
       z-index: 3
     +sm
       z-index: 1
-      .section__outer
+    .section__outer
+      +sm
         padding-top: 0
     .section__title-md
       max-width: 700px
-      +sm
-        margin-top: 90px
     .section__left
       +flex-size(32.1%)
       background-position: -2px -3%
       +md
-        min-height: 868px
-        position: relative
-        margin-left: -46px
-        background-position: 0 -3%
-        +flex-size(calc(33% + 46px))
+        margin-left: -45px
+        +flex-size(39%)
       +sm
-        height: 225px
-        min-height: inherit
-        +cover
-        margin-left: -40px 
-        +flex-size(100%)
-        background-position: 0 0
+        margin-left: -39px 
     .section__right
+      +flex-size(67.9%)
       +md
         padding-left: 45px
-        +flex-size(calc(66% - 46px))
+        padding-right: 45px
+        min-height: 867px
+        +flex-size(61%)
       +sm
         padding-left: 0
-        padding-right: 35px
-        margin-bottom: 60px
+        min-height: auto
   &_career
     pointer-events: auto
     min-height: calc(100vh - 135px)
@@ -68,11 +70,14 @@
       min-height: calc(100vh - 121px)
       margin-top: 0
     +sm
+      margin-bottom: 77px 
       min-height: inherit
     +hover
       z-index: 3
     .section__outer
       padding-top: 0
+      +md
+        padding-top: 60px
       +sm 
         padding-top: 37px
     .section__left
@@ -83,12 +88,19 @@
         +flex-size(33%)
         background-position: -11px 191px
         background-size: 364px 674px
+      +sm
+        background-size: 163px 296px
+        background-position: 23% 7px
     .section__right
       +flex-size(67.9%)
       +md
         padding-left: 45px 
         +flex-size(66%)
         min-height: 748px
+      +sm
+        padding-left: 0 
+        min-height: 0
+        
   &_contacts
     color: $white
     .section__title
@@ -121,10 +133,11 @@
         min-height: 100vh
     .section__outer
       +md
-        padding-top: 60px
+        padding-top: 120px
         padding-left: 0
         padding-right: 0
       +sm
+        padding-top: 0
         display: block
   &_development
     height: auto
@@ -140,18 +153,16 @@
       min-height: calc(100vh - 121px)
     +md
       position: static
-      margin-bottom: 60px
       margin-top: 0
       min-height: inherit
-    +sm
-      margin-bottom: 0
+      .section__outer
     +hover
       z-index: 3
     .section__outer
       padding-top: 0
       +md
         padding-top: 60px
-      +sm
+      +md
         padding-top: 37px
     .section__inner
       padding-left: 77px
@@ -163,7 +174,7 @@
       +lm
         +flex-size(50%)
       +md
-        padding-bottom: 124px
+        padding-bottom: 130px 
         +flex-size(460px)
       +sm
         padding-right: 45px
@@ -223,6 +234,7 @@
   &__outer
     padding-top: 135px
     +xl
+      padding-top: 120px
     +md
       padding-top: 120px
     +sm
@@ -301,6 +313,9 @@
       margin-top: 50px 
     +md
       margin-top: 136px 
+    +sm
+      margin-top: 100px
+      margin-bottom: 50px 
   .section__text
     margin-bottom: 39px
     +md 
@@ -321,6 +336,10 @@
     +xl
       margin-top: -25px
       margin-bottom: -25px
+    +sm
+      margin-top: -30px
+      margin-bottom: -30px
+      text-align: center
   &__download-btn-area
     position: relative
     display: block
@@ -338,6 +357,10 @@
       margin-top: 30px
     +md
       margin-top: 60px
+    +sm
+      margin-left: -31px
+      margin-right: -31px
+      text-align: center
   &__adress
     margin-bottom: 60px
     +xxl
