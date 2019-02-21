@@ -114,8 +114,8 @@
         </section>
         <section class="section section_selling js-section" data-anchor="selling" data-fullpage-anim-delay='0.001'>
           <div class="section__outer outer">
-            <div class="section__inner inner" data-scroll-trigger>
-              <div class="section__left" data-anim-group>
+            <div class="section__inner inner">
+              <div class="section__left" data-scroll-trigger data-anim-group>
                 <div data-anim="from-top">
                   <div class="section__title-lg">
                     <h2 class="title-lg">Купить квартиру <br>в Москве</h2>
@@ -163,8 +163,8 @@
         </section>
         <section class="section section_selling js-section" data-anchor="selling-euro" data-fullpage-anim-delay='0.001'>
           <div class="section__outer outer">
-            <div class="section__inner inner" data-scroll-trigger>
-              <div class="section__left" data-anim-group>
+            <div class="section__inner inner">
+              <div class="section__left" data-scroll-trigger data-anim-group>
                 <div data-anim="from-top">
                   <div class="section__title-lg">
                     <h2 class="title-lg">Купить квартиру <br>в Европе</h2>
@@ -210,7 +210,7 @@
             </div>
           </div>
         </section>
-        <section class="js-section sections-wrapper js-sections-wrapper" data-anchor="investment">
+        <section class="js-section sections-wrapper js-sections-wrapper" data-anchor="investment" data-fullpage-anim-delay='0.1'>
           <section class="section section_investment" data-anchor="investment js-section-investment">
             <div class="section__outer outer">
               <div class="section__inner inner" data-anchor='hero' data-scroll-trigger data-anim-group data-duration-anim='0.7'>
@@ -257,8 +257,8 @@
           </section>
           <section class="section section_development js-section-development">
             <div class="section__outer outer">
-              <div class="section__inner inner" data-scroll-trigger data-anim-group data-duration-anim='0.7'>
-                <div class="section__left section__left_border section__left_border-dark">
+              <div class="section__inner inner">
+                <div class="section__left section__left_border section__left_border-dark" data-scroll-trigger data-anim-group data-duration-anim='0.7'>
                   <div class="section__title-md" data-anim="from-bottom">
                     <h2 class="title">Девелопмент, разработка и реализация проекта</h2>
                   </div>
@@ -276,19 +276,21 @@
                     </a>
                   </div>
                 </div>
-                <div class="section__right" data-anim='image-from-right'>
-                  <div class="section__bg" style='background-image: url(img/development_bg.png);'></div>
+                <div class="section__right" data-scroll-trigger>
+                  <div class="section__bg-wrapper" data-anim='image-from-right'>
+                    <div class="section__bg" style='background-image: url(img/development_bg.png);'></div>
+                  </div>
                 </div>
               </div>
             </div>
           </section>
           <section class="section section_career">
             <div class="section__outer outer">
-              <div class="section__inner inner" data-scroll-trigger data-anim-group data-duration-anim='0.7'>
-                <div class="section__left section__left_border" data-anim='image-from-left'>
+              <div class="section__inner inner" data-scroll-trigger data-anim-group='0' data-duration-anim='0.7'>
+                <div class="section__left section__left_border" data-anim='image-from-left' data-scroll-trigger>
                   <div class="section__bg" style='background-image: url(img/office-woman.png);'></div>
                 </div>
-                <div class="section__right text-light">
+                <div class="section__right text-light" data-scroll-trigger>
                   <div class="section__title-md" data-anim="from-bottom">
                     <h2 class="title">Карьера</h2>
                   </div>
@@ -428,7 +430,7 @@
                       </span>
                     </div>
                   </div>
-                  <div class="connection text-right">
+                  <div class="connection">
                     <a href="https://www.sparkledesign.com/" class="studio-creator" target="_blank">Sparkledesign.com</a>
                   </div>
                 </div>
@@ -558,6 +560,15 @@
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="reload-message">
+        <div class="reload-message__container">
+          <div class="reload-message__inner">
+            <div class="reload-message__message">
+              <h3 class="title">Перегрузите, пожалуйста, браузер</h3>
             </div>
           </div>
         </div>

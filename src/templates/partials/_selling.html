@@ -3,8 +3,8 @@
 {% macro section(props) %}
   <section class="section section_selling js-section" data-anchor="{{ props.id }}" data-fullpage-anim-delay='0.001'>
     <div class="section__outer outer">
-      <div class="section__inner inner" data-scroll-trigger>
-        <div class="section__left" data-anim-group>
+      <div class="section__inner inner" >
+        <div class="section__left" data-scroll-trigger data-anim-group>
           <div data-anim="from-top">
             <div class="section__title-lg">
               <h2 class="title-lg">{{ props.title | safe }}</h2>
