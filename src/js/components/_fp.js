@@ -68,6 +68,7 @@ $(document).ready(function() {
         loadedSection.find(".js-animated-block").addClass(ANIMATE);
 
         const elements = loadedSection.find("[data-anim]");
+        const groups = loadedSection.find('[data-anim-group]');
         const delay = loadedSection.data("fullpage-anim-delay");
         const duration = loadedSection.data("fullpage-anim-duration");
         TweenLite.set($(".js-section [data-anim]"), {
