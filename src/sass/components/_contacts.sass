@@ -103,9 +103,6 @@
     transition: transform .25s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity .3s cubic-bezier(0.175, 0.885, 0.32, 1.275)
     transform: translateY(-20px)
     opacity: 0
-    +md
-      opacity: 1
-      transform: translateY(0)
     .icon
       position: relative
       font-size: 21px
@@ -122,9 +119,6 @@
     transition: opacity .45s ease-out, transform .45s ease-out
     transform: translateX(-15px)
     color: $textLight
-    +md
-      transform: translateX(0)
-      opacity: 1
 
 .map-point
   position: absolute

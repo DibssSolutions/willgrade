@@ -1,11 +1,8 @@
 import { WIN, ANIMATE } from '../constants';
-import { IS_FUNC } from '../utils';
+import { IS_FUNC, mediaWidth } from '../utils';
 
-import { STAGGER } from './helpers/_stagger';
-import { STAGGERGROUPS } from './helpers/_stagerGroups';
-
-// import OBSERVER from '../communication/_observer';
-// import EVENT from '../communication/_events';
+import { STAGGER } from './_stagger';
+import { STAGGERGROUPS } from './_stagerGroups';
 
 export default class SCROLLTRIGGER {
   constructor(prop) {
@@ -24,6 +21,8 @@ export default class SCROLLTRIGGER {
         ? (itemOffset = 0)
         : (itemOffset = itemData || this._offset || 50);
       const show = () => {
+        if (!mediaWidth(1023)) return;
+
         const thisOffset = item.offset().top + itemOffset;
         const windowOffset = WIN.scrollTop() + WIN.outerHeight();
 
@@ -64,11 +63,10 @@ export const staggerAnimation = item => {
     delay: animDelay,
     ease: animEase,
     onStart: () => {
-      // $(selector).addClass(ANIMATE);
+   
     },
     onComplete: tl => {
-      animContainers.css('display', 'inline');
-      $(selector).addClass(ANIMATE);
+      
     }
   });
 };

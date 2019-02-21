@@ -2,6 +2,11 @@
   .fp-tableCell, .header
     +clr
 
+.fp-tableCell, .section 
+  position: relative
+  overflow: hidden
+  max-height: 100vh
+
 .sections-wrapper
   position: relative
   overflow-x: hidden
@@ -19,6 +24,8 @@
   &_investment,
   &_career,
   &_development
+    +sm 
+      overflow: hidden
     .section__inner
       +sm
         flex-direction: column
@@ -44,12 +51,13 @@
       max-width: 700px
     .section__left
       +flex-size(32.1%)
-      background-position: -2px -3%
       +md
         margin-left: -45px
         +flex-size(39%)
       +sm
-        margin-left: -39px 
+        margin-left: -39px
+    .section__bg
+      background-position: -2px -3%
     .section__right
       +flex-size(67.9%)
       +md
@@ -81,11 +89,13 @@
       +sm 
         padding-top: 37px
     .section__left
-      background-position: 47px 180px
-      background-size: 422px 780px
       +flex-size(32.1%)
       +md
         +flex-size(33%)
+    .section__bg
+      background-position: 47px 180px
+      background-size: 422px 780px
+      +md
         background-position: -11px 191px
         background-size: 364px 674px
       +sm
@@ -100,7 +110,6 @@
       +sm
         padding-left: 0 
         min-height: 0
-        
   &_contacts
     color: $white
     .section__title
@@ -419,4 +428,6 @@
     max-width: 100%
     display: inline-block
     vertical-align: middle
-
+  &__bg
+    +coverdiv
+    +cover

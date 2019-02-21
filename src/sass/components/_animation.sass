@@ -19,10 +19,27 @@
   //         transition-delay: $transition-delay
   //         $transition-delay: $transition-delay + .25s
 
-[data-anim="text-from-bottom"]
-  display: block
-  position: relative
-  transform: translateY(102%)
+[data-anim="image-from-right"]
+  opacity: 0
+  transform: translateX(100px)
+
+[data-anim="image-from-left"]
+  opacity: 0
+  transform: translateX(-100px)
+
+[data-anim="image-from-bottom"]
+  opacity: 0
+  transform: translateY(100%)
+
+[data-anim="image-from-left"],
+[data-anim="image-from-right"]
+  +sm
+    transform: translateY(50px)
+    // transition: opacity $tr, visibility $tr, transform $tr
+    // &.is-animate
+    //   transform: translateY(0)
+    //   opacity: 1
+    //   visibility: visible
 
 [data-anim="splitter-fade"]
   opacity: 0

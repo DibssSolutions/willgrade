@@ -1,5 +1,5 @@
-import { IS_FUNC } from '../../utils';
-import { ANIMATE } from '../../constants';
+import { IS_FUNC } from '../utils';
+import { ANIMATE } from '../constants';
 import { TimelineMax } from 'gsap';
 export const STAGGER = props => {
   let tl = new TimelineMax();
@@ -10,6 +10,7 @@ export const STAGGER = props => {
       y: props.y || 0,
       x: props.x || 0,
       opacity: props.opacity || 1,
+      className: '+=is-animate',
       ease: IS_FUNC(props.ease)
         ? props.ease
         : eval(props.ease) || Power2.easeOut
