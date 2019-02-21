@@ -19,7 +19,7 @@ export default class SCROLLTRIGGER {
       let itemOffset;
       itemData === 0
         ? (itemOffset = 0)
-        : (itemOffset = itemData || this._offset || 50);
+        : (itemOffset = itemData || this._offset || 100);
       const show = () => {
         if (!mediaWidth(1023)) return;
 
@@ -61,12 +61,8 @@ export const staggerAnimation = item => {
     duration: animDuration,
     delay: animDelay,
     ease: animEase,
-    onStart: () => {
-   
-    },
-    onComplete: tl => {
-      
-    }
+    onStart: () => {},
+    onComplete: tl => {}
   });
 };
 
