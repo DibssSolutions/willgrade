@@ -52,6 +52,7 @@ $(document).ready(function() {
         var headerBtn = $(".js-header-btn");
         $(".js-animated-block").removeClass(ANIMATE);
         $("[data-anim]").removeClass(ANIMATE);
+
         if (origin == 1 && direction == "down") {
           header.removeClass("is-transparent");
           headerBtn.removeClass("btn_solid").addClass("btn_blue");
@@ -59,13 +60,16 @@ $(document).ready(function() {
           header.addClass("is-transparent");
           headerBtn.removeClass("btn_blue").addClass("btn_solid");
         }
+
       },
       afterLoad: function(origin, destination, direction) {
-        var loadedSection = this;
-        $(sections[destination - 1])
-          .find(".js-animated-block")
-          .addClass(ANIMATE);
-        const elements = $(sections[destination - 1]).find("[data-anim]");
+        const loadedSection = $(sections[destination - 1]);
+
+        loadedSection.find(".js-animated-block").addClass(ANIMATE);
+
+        const elements = loadedSection.find("[data-anim]");
+        const delay = loadedSection.data("fullpage-anim-delay");
+        const duration = loadedSection.data("fullpage-anim-duration");
         TweenLite.set($(".js-section [data-anim]"), {
           clearProps: "all"
         });
@@ -74,7 +78,7 @@ $(document).ready(function() {
             let tl = new TimelineMax();
             tl.staggerTo(
               elements,
-              0.6,
+              duration || 0.8,
               {
                 y: 0,
                 x: 0,
@@ -82,12 +86,11 @@ $(document).ready(function() {
                 className: "+=is-animate",
                 ease: Power2.easeOut
               },
-              0.1
+              delay || 0.25
             );
             return tl;
           }, 0)
           .play(0);
-        const all = $(".section");
       }
     });
 

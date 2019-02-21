@@ -27,9 +27,9 @@
   opacity: 0
   transform: translateX(-100px)
 
-[data-anim="image-from-bottom"]
-  opacity: 0
-  transform: translateY(100%)
+// [data-anim="image-from-bottom"]
+//   opacity: 0
+//   transform: translateY(100%)
 
 [data-anim="image-from-left"],
 [data-anim="image-from-right"]
@@ -44,76 +44,15 @@
 [data-anim="splitter-fade"]
   opacity: 0
 
-[data-anim-inner="line-from-left"]
-  position: relative
-  transform: translateX(-100%)
-
-[data-anim-wrap="line-from-left"]
-  position: relative
-  overflow: hidden
-  display: inline-block
-
-[data-anim="line-from-left"]
-  transform: translateX(-100%)
-
-[data-anim="from-right"]
-  transform: translateX(100%)
-
-[data-anim="photo-from-right"]
-  transform: translateX(220%)
-
 [data-anim="from-bottom"]
-  // transition: opacity $tr, visibility $tr, transform $tr
-  transform: translateY(50px)
+  transform: translateY(100%)
   opacity: 0
-
-[data-anim="blockquote-from-bottom"],
-[data-anim="social-anim"],
-[data-anim="works-item-text-from-bottom"]
-  transform: translateY(20px)
-  opacity: 0
-
-[data-anim="text-block-from-bottom"]
-  transform: translateY(70px)
-  opacity: 0
-
-[data-anim="avatar-anim"]
-  transform: translateX(-30px)
-  opacity: 0
-
-[data-anim="btn-text-from-bottom"],
-  transform: translateY(30px)
-  opacity: 0
-
-[data-anim="contacts-from-bottom"]
-  transform: translateY(50px)
-  opacity: 0
-
-[data-rows]
-  visibility: hidden
-  &.is-animate,
-  [data-scroll-trigger].is-animate &
-    visibility: visible
+  +sm 
+    transform: translateY(50px)
+    transition: 0.6s
 
 [data-anim="from-top"]
-  position: relative
-  transform: translateY(-55px)
+  transform: translateY(-100%)
   opacity: 0
-
-[data-anim="sphere-from-top"]
-  position: relative
-  transform: translateY(-350px)
-
-[data-anim="from-left"]
-  position: absolute
-  transform: translateX(-100%)
-
-[data-anim="logo-from-left"]
-  opacity: 0
-  transform: translateX(-60%)
-
-[data-anim="sphere-from-left"]
-  position: absolute
-  -webkit-backface-visibility: hidden
-  -moz-backface-visibility: hidden
-  backface-visibility: hidden
+  +sm 
+    transform: translateY(50px)

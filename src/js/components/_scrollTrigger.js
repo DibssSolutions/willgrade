@@ -59,7 +59,6 @@ export const staggerAnimation = item => {
   STAGGER({
     elements: selector,
     duration: animDuration,
-    classAdd: animClassAdd,
     delay: animDelay,
     ease: animEase,
     onStart: () => {
