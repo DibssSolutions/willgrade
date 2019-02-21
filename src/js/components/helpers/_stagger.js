@@ -1,6 +1,6 @@
-import { IS_FUNC } from "../../utils";
-import { ANIMATE } from "../../constants";
-import { TimelineMax } from "gsap";
+import { IS_FUNC } from '../../utils';
+import { ANIMATE } from '../../constants';
+import { TimelineMax } from 'gsap';
 export const STAGGER = props => {
   let tl = new TimelineMax();
   tl.staggerTo(
@@ -17,7 +17,7 @@ export const STAGGER = props => {
     props.delay || 0.25
   )
     .eventCallback(
-      "onStart",
+      'onStart',
       () => {
         if (!IS_FUNC(props.onStart)) return;
         props.onStart(tl);
@@ -25,7 +25,7 @@ export const STAGGER = props => {
       null
     )
     .eventCallback(
-      "onComplete",
+      'onComplete',
       () => {
         if (!IS_FUNC(props.onComplete)) return;
         props.onComplete(tl);
