@@ -1,5 +1,7 @@
 .hero
-  +cover
+  background-color: #0051c3
+  .fp-scroller
+    overflow: visible
   &__outer
     height: 100%
     padding-top: 200px
@@ -16,6 +18,16 @@
       padding-top: 170px
       padding-bottom: 52px
       margin-bottom: 76px
+  &__bg-wrapper
+    +coverdiv
+    min-height: 100vh
+    &.is-animate
+      position: absolute
+  &__bg
+    +coverdiv
+    background-size: contain
+    background-position: 100% 0
+    background-repeat: no-repeat
   &__content
     // width: 50%
     width: 100%

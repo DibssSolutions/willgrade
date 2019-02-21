@@ -89,8 +89,8 @@
   </button>
 {% endmacro %}
 
-{% macro connectionBtn(iconname, modifier) %}
-  <a href="#" class="circle-btn {% if modifier %} circle-btn_{{modifier}} {% endif %}js-animated-btn">
+{% macro connectionBtn(iconname, modifier, animModifier) %}
+  <a href="#" class="circle-btn {% if modifier %} circle-btn_{{modifier}} {% endif %}js-animated-btn" {% if animModifier %}{{ animModifier }}{% endif %}>
     <span class="circle-btn__icon">
       <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
       viewBox="0 0 51 51">
