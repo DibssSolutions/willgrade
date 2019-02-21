@@ -9,7 +9,9 @@
             <div class="section__title-lg">
               <h2 class="title-lg">{{ props.title | safe }}</h2>
             </div>
-            <div class="section__splitter-horiz"></div>
+            <div class="section__splitter-wrapper">
+              <div class="section__splitter-horiz" data-anim='line-from-left'></div>
+            </div>
             <div class="section__text">{{ props.text | safe }}</div>
             <div class="section__download-btn-wrapper">
               <div class="section__download-btn-area js-download-field">{{ mixins.downloadBtn() }}</div>
