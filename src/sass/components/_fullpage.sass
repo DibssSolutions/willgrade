@@ -2,11 +2,6 @@
   .fp-tableCell, .header
     +clr
 
-.fp-tableCell, .section 
-  position: relative
-  overflow: hidden
-  max-height: 100vh
-
 .sections-wrapper
   position: relative
   overflow-x: hidden
@@ -24,9 +19,8 @@
   &_investment,
   &_career,
   &_development
-    +sm 
-      overflow: hidden
     .section__inner
+      overflow: hidden
       +sm
         flex-direction: column
     .section__right,
@@ -235,10 +229,10 @@
       margin-bottom: 27px
       +xl
         margin-top: 30px
-      +sm 
+      +sm
         margin-top: 42px
-    +sm
-      .section__outer
+    .section__outer
+      +sm
         padding-bottom: 100px
   &__outer
     padding-top: 135px
@@ -431,3 +425,6 @@
   &__bg
     +coverdiv
     +cover
+  &__bg-wrapper
+    +coverdiv
+    position: absolute !important

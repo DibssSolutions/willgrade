@@ -1,21 +1,25 @@
 {% import "partials/_mixins.html" as mixins %}
 
 {% macro section(props) %}
-  <section class="section section_selling js-section" data-anchor="{{ props.id }}">
+  <section class="section section_selling js-section" data-anchor="{{ props.id }}" data-fullpage-anim-delay='0.001'>
     <div class="section__outer outer">
-      <div class="section__inner inner">
-        <div class="section__left" data-scroll-trigger data-anim-group data-duration-anim='0.7'>
-          <div class="section__title-lg">
-            <h2 class="title-lg" data-anim="from-bottom">{{ props.title | safe }}</h2>
-          </div>
-          <div class="section__splitter-horiz" data-anim="splitter-fade"></div>
-          <div class="section__text" data-anim="from-bottom">{{ props.text | safe }}</div>
-          <div class="section__download-btn-wrapper">
-            <div class="section__download-btn-area js-download-field">{{ mixins.downloadBtn() }}</div>
+      <div class="section__inner inner" data-scroll-trigger>
+        <div class="section__left" data-anim-group>
+          <div data-anim="from-top">
+            <div class="section__title-lg">
+              <h2 class="title-lg">{{ props.title | safe }}</h2>
+            </div>
+            <div class="section__splitter-horiz"></div>
+            <div class="section__text">{{ props.text | safe }}</div>
+            <div class="section__download-btn-wrapper">
+              <div class="section__download-btn-area js-download-field">{{ mixins.downloadBtn() }}</div>
+            </div>
           </div>
         </div>
-        <div class="section__right" data-scroll-trigger data-anim='image-from-bottom'>
-          <div class="section__bg" style='background-image: url(img/{{ props.bg }});'></div>
+        <div class="section__right" data-scroll-trigger>
+          <div class="section__bg-wrapper" data-anim='from-bottom'>
+            <div class="section__bg" style='background-image: url(img/{{ props.bg }});'></div>
+          </div>
         </div>
       </div>
     </div>
