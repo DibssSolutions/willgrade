@@ -26,16 +26,20 @@
       display: none
   &__bg
     +coverdiv
-    background-size: contain
+    background-size: 890px 1001px
     background-position: 100% 0
     background-repeat: no-repeat
-    +xxl
-      background-position: 130% 0
+    +lg
+      background-position: 150% 0
+    +lm 
+      background-position: calc(100vw - 420px) 0
+    +md
+      background-position: 390px 0
   &__content
     width: 100%
     max-width: 854px
     +xxl
-      max-width: 754px 
+      max-width: 754px
   &__logo
     display: block
     margin-bottom: 100px

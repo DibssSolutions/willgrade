@@ -21,7 +21,7 @@ export default class SCROLLTRIGGER {
         ? (itemOffset = 0)
         : (itemOffset = itemData || this._offset || 100);
       const show = () => {
-        if (!mediaWidth(1023)) return;
+        if (!mediaWidth(1024)) return;
 
         const thisOffset = item.offset().top + itemOffset;
         const windowOffset = WIN.scrollTop() + WIN.outerHeight();
