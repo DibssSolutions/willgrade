@@ -45,7 +45,7 @@ function initFullpage() {
   $(".js-fullpage").fullpage({
     responsiveWidth: 10,
     responsiveHeight: 10,
-    scrollingSpeed: 800,
+    scrollingSpeed: 600,
     sectionSelector: ".js-section",
     scrollOverflow: true,
     responsive: 768,

@@ -29,7 +29,7 @@
         +flex-size(100%)
     .section__right
       +sm
-        padding-right: 30px 
+        padding-right: 30px
   &_investment
     position: relative
     min-height: inherit
@@ -72,7 +72,7 @@
       min-height: calc(100vh - 121px)
       margin-top: 0
     +sm
-      margin-bottom: 77px 
+      margin-bottom: 77px
       min-height: inherit
     +hover
       z-index: 3
@@ -115,9 +115,9 @@
       +xxl
         padding-left: 30px
       +md
-        padding-left: 68px 
+        padding-left: 68px
       +sm
-        padding-left: 54px 
+        padding-left: 54px
     .section__left
       +md
         padding-right: 37px
@@ -177,11 +177,11 @@
       +lm
         +flex-size(50%)
       +md
-        padding-bottom: 130px 
+        padding-bottom: 130px
         +flex-size(460px)
       +sm
         padding-right: 45px
-        padding-bottom: 80px 
+        padding-bottom: 80px
         height: auto
     .section__right
       +lm
@@ -194,6 +194,9 @@
         margin-bottom: 82px 
         height: 250px 
         &:before
+          transform: scaleX(0)
+          transform-origin: 0 0
+          transition: transform $tr 0.3s
           position: absolute
           content: "" 
           bottom: -33px
@@ -202,6 +205,9 @@
           height: 1px
           width: 78%
           background-color: #272F38 
+        &.is-animate 
+          &:before
+            transform: scaleX(1)
     .section__title-md
       +sm
         margin-top: 0
@@ -213,7 +219,7 @@
   &_selling
     .section__title-lg
       margin-top: 26px
-      +md 
+      +md
         margin-bottom: 56px
       +sm
         margin-top: 53px
@@ -234,6 +240,8 @@
     .section__outer
       +sm
         padding-bottom: 100px
+    .section__right
+      overflow: hidden
   &__outer
     padding-top: 135px
     +xl
