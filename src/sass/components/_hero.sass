@@ -1,10 +1,7 @@
 .hero
   background-color: #0051c3
-  // &__wrapper
-  //   position: relative
-  //   overflow: hidden
-  //   min-height: calc(100vh - 135px)
-  //   width: 100%
+  +md 
+    position: relative
   &__outer
     height: 100%
     padding-top: 200px
@@ -32,8 +29,9 @@
     background-size: contain
     background-position: 100% 0
     background-repeat: no-repeat
+    +xxl
+      background-position: 130% 0
   &__content
-    // width: 50%
     width: 100%
     max-width: 854px
     +xxl

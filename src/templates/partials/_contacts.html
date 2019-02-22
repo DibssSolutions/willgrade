@@ -5,7 +5,7 @@
         <div class="section__contacts-title" data-anim="from-bottom">
           <h2 class="title">Адреса компании</h2>
         </div>
-        <div class="section__adress" data-anim="from-bottom">
+        <div class="section__adress" data-anim="contacts-from-bottom">
             {% for adress in [
               {
                 city: 'Москва',
@@ -36,8 +36,10 @@
               </div>
             {% endfor %}
         </div>
-        <div class="section__splitter-horiz section__splitter-horiz_white"></div>
-        <div class="section__connections" data-anim="from-bottom">
+        <div class="section__splitter-wrapper">
+          <div class="section__splitter-horiz section__splitter-horiz_white" data-anim='line-from-left'></div>
+        </div>
+        <div class="section__connections" data-anim="contacts-from-bottom">
           <div class="connection">
             <div class="connection__text">
                 +79 (919) 111 99 19
@@ -62,7 +64,12 @@
             </div>
           </div>
           <div class="connection">
-            <a href="https://www.sparkledesign.com/" class="studio-creator" target="_blank">Sparkledesign.com</a>
+            <div class="connection__text connection__text_small">
+              Сайт создан
+            </div>
+            <span class="connection__link">
+              <a href="https://www.sparkledesign.com/" class="studio-creator" target="_blank">Sparkledesign.com</a>
+            </span>
           </div>
         </div>
       </div>
