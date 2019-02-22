@@ -80,7 +80,7 @@
                 <div class="hero__descr text-block" data-anim="from-bottom"> Мы осуществляем продажу квартир и коммерческой недвижимости в Москве, Великобритании, Австрии, Монако, Швейцарии, Франции, Германии и Чехии. </div>
                 <div class="hero__actions">
                   <div class="hero__question-btn">
-                    <a href="#" class="btn btn_animated  btn_white" data-modal-control="contacts-modal" data-anim data-anim-class-add='is-animate'>
+                    <a href="#" class="btn btn_animated  btn_white" data-modal-control="contacts-modal" data-anim="button-anim">
                       <span class="btn__line"></span>
                       <span class="btn__line"></span>
                       <span class="btn__line"></span>
@@ -89,7 +89,7 @@
                     </a>
                   </div>
                   <div class="hero__play">
-                    <a href="https://www.youtube.com/watch?v=_sI_Ps7JSEk" class="circle-btn circle-btn_play js-fancybox" data-anim>
+                    <a href="https://www.youtube.com/watch?v=_sI_Ps7JSEk" class="circle-btn circle-btn_play js-fancybox" data-anim="button-anim">
                       <span class="circle-btn__icon">
                         <svg width="51px" height="51px" viewBox="0 0 51 51" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                           <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -129,7 +129,7 @@
                   </div>
                   <div class="section__download-btn-wrapper">
                     <div class="section__download-btn-area js-download-field">
-                      <button class="circle-btn circle-btn_download js-download-btn" data-anim>
+                      <button class="circle-btn circle-btn_download js-download-btn" data-anim='button-anim'>
                         <span class="circle-btn__icon">
                           <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 51 51">
                             <!-- <g class='hovered hovered_blue'>
@@ -156,7 +156,7 @@
                 </div>
               </div>
               <div class="section__right" data-scroll-trigger>
-                <div class="section__bg-wrapper" data-anim='from-bottom'>
+                <div class="section__bg-wrapper" data-anim='selling-image'>
                   <div class="section__bg" style='background-image: url(img/selling_bg_Russia.png);'></div>
                 </div>
               </div>
@@ -180,7 +180,7 @@
                   </div>
                   <div class="section__download-btn-wrapper">
                     <div class="section__download-btn-area js-download-field">
-                      <button class="circle-btn circle-btn_download js-download-btn" data-anim>
+                      <button class="circle-btn circle-btn_download js-download-btn" data-anim='button-anim'>
                         <span class="circle-btn__icon">
                           <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 51 51">
                             <!-- <g class='hovered hovered_blue'>
@@ -207,7 +207,7 @@
                 </div>
               </div>
               <div class="section__right" data-scroll-trigger>
-                <div class="section__bg-wrapper" data-anim='from-bottom'>
+                <div class="section__bg-wrapper" data-anim='selling-image'>
                   <div class="section__bg" style='background-image: url(img/selling_bg_Europe.png);'></div>
                 </div>
               </div>
@@ -217,11 +217,13 @@
         <section class="js-section sections-wrapper js-sections-wrapper" data-anchor="investment" data-fullpage-anim-delay='0.1'>
           <section class="section section_investment" data-anchor="investment js-section-investment">
             <div class="section__outer outer">
-              <div class="section__inner inner" data-anchor='hero' data-scroll-trigger data-anim-group data-duration-anim='0.7'>
-                <div class="section__left section__left_border" data-anim="image-from-left">
-                  <div class="section__bg" style='background-image: url(img/invest_bg_1.png);'></div>
+              <div class="section__inner inner" data-anchor='hero'>
+                <div class="section__left section__left_border" data-scroll-trigger>
+                  <div class="section__bg-wrapper" data-anim='image-from-left'>
+                    <div class="section__bg" style='background-image: url(img/invest_bg_1.png);'></div>
+                  </div>
                 </div>
-                <div class="section__right text-light">
+                <div class="section__right text-light" data-scroll-trigger data-anim-group data-duration-anim='0.7'>
                   <div class="section__title-md" data-anim="from-bottom">
                     <h2 class="title">Инвестиции в жилую и коммерческую недвижимость</h2>
                   </div>
@@ -231,7 +233,7 @@
                   </div>
                   <div class="section__download-btn-wrapper">
                     <div class="section__download-btn-area js-download-field">
-                      <button class="circle-btn circle-btn_download js-download-btn" data-anim>
+                      <button class="circle-btn circle-btn_download js-download-btn" data-anim='button-anim'>
                         <span class="circle-btn__icon">
                           <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 51 51">
                             <!-- <g class='hovered hovered_blue'>
@@ -271,7 +273,7 @@
                         <p>Подбираем оптимальные участки под строительство, помогаем выбрать надежного генерального подрядчика и находим архитектора проекта.</p>
                   </div>
                   <div class="section__development-btn">
-                    <a href="#" class="btn btn_animated  btn_blue" data-modal-control="contacts-modal" data-anim data-anim-class-add='is-animate'>
+                    <a href="#" class="btn btn_animated  btn_blue" data-modal-control="contacts-modal" data-anim="button-anim">
                       <span class="btn__line"></span>
                       <span class="btn__line"></span>
                       <span class="btn__line"></span>
@@ -290,11 +292,13 @@
           </section>
           <section class="section section_career">
             <div class="section__outer outer">
-              <div class="section__inner inner" data-scroll-trigger data-anim-group='0' data-duration-anim='0.7'>
-                <div class="section__left section__left_border" data-anim='image-from-left' data-scroll-trigger>
-                  <div class="section__bg" style='background-image: url(img/office-woman.png);'></div>
+              <div class="section__inner inner">
+                <div class="section__left section__left_border" data-scroll-trigger>
+                  <div class="section__bg-wrapper" data-anim='image-from-left'>
+                    <div class="section__bg" style='background-image: url(img/office-woman.png);'></div>
+                  </div>
                 </div>
-                <div class="section__right text-light" data-scroll-trigger>
+                <div class="section__right text-light" data-scroll-trigger data-anim-group='0' data-duration-anim='0.7'>
                   <div class="section__title-md" data-anim="from-bottom">
                     <h2 class="title">Карьера</h2>
                   </div>
@@ -303,7 +307,7 @@
                   </div>
                   <div class="section__download-btn-wrapper">
                     <div class="section__download-btn-area js-download-field">
-                      <button class="circle-btn circle-btn_download js-download-btn" data-anim>
+                      <button class="circle-btn circle-btn_download js-download-btn" data-anim='button-anim'>
                         <span class="circle-btn__icon">
                           <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 51 51">
                             <!-- <g class='hovered hovered_blue'>
@@ -328,7 +332,7 @@
                     </div>
                   </div>
                   <div class="section__hr-btn">
-                    <a href="#" class="btn btn_animated  btn_white" data-modal-control="contacts-modal" data-anim data-anim-class-add='is-animate'>
+                    <a href="#" class="btn btn_animated  btn_white" data-modal-control="contacts-modal" data-anim="button-anim">
                       <span class="btn__line"></span>
                       <span class="btn__line"></span>
                       <span class="btn__line"></span>
@@ -388,7 +392,7 @@
                     <div class="connection__text"> +79 (919) 111 99 19 </div>
                     <div class="connection__links">
                       <span class="connection__link">
-                        <a href="#" class="circle-btn js-animated-btn" data-anim>
+                        <a href="#" class="circle-btn js-animated-btn" data-anim=button-anim>
                           <span class="circle-btn__icon">
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 51 51">
                               <path class="circle-btn__circle" d="M25.5,1.5 C12.2522847,1.5 1.5,12.2522847 1.5,25.5 C1.5,38.7477153 12.2522847,49.5 25.5,49.5 C38.7477153,49.5 49.5,38.7477153 49.5,25.5 C49.5,12.2522847 38.7477153,1.5 25.5,1.5 Z" stroke="#FFF" stroke-width="2"></path>
@@ -402,7 +406,7 @@
                         </a>
                       </span>
                       <span class="connection__link">
-                        <a href="#" class="circle-btn js-animated-btn" data-anim>
+                        <a href="#" class="circle-btn js-animated-btn" data-anim=button-anim>
                           <span class="circle-btn__icon">
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 51 51">
                               <path class="circle-btn__circle" d="M25.5,1.5 C12.2522847,1.5 1.5,12.2522847 1.5,25.5 C1.5,38.7477153 12.2522847,49.5 25.5,49.5 C38.7477153,49.5 49.5,38.7477153 49.5,25.5 C49.5,12.2522847 38.7477153,1.5 25.5,1.5 Z" stroke="#FFF" stroke-width="2"></path>
@@ -421,7 +425,7 @@
                     <div class="connection__text"> willgrade </div>
                     <div class="connection__links">
                       <span class="connection__link">
-                        <a href="#" class="circle-btn js-animated-btn" data-anim>
+                        <a href="#" class="circle-btn js-animated-btn" data-anim=button-anim>
                           <span class="circle-btn__icon">
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 51 51">
                               <path class="circle-btn__circle" d="M25.5,1.5 C12.2522847,1.5 1.5,12.2522847 1.5,25.5 C1.5,38.7477153 12.2522847,49.5 25.5,49.5 C38.7477153,49.5 49.5,38.7477153 49.5,25.5 C49.5,12.2522847 38.7477153,1.5 25.5,1.5 Z" stroke="#FFF" stroke-width="2"></path>
